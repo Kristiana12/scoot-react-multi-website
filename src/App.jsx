@@ -1,31 +1,29 @@
-import { styled } from 'styled-components';
-
-const ReversedButton = (props) => (
-  <Button {...props} children={props.children.split('').reverse()} />
-);
+import { Navigation, Footer } from './components/ExportComponents';
+import { ThemeProvider } from 'styled-components';
+import { light, dark } from './components/styles/Theme.styled';
+import { Routes, Route } from 'react-router-dom';
+import {
+  Home,
+  About,
+  Location,
+  Career,
+  ErrorPage,
+} from './pages/ExportPagesComponents.jsx';
 
 function App() {
   return (
-    <>
-      <div>
-        <Button>Normal Button</Button>
-        <Button as={ReversedButton}>
-          Custom Button with Normal Button styles
-        </Button>
-      </div>
-    </>
+    <ThemeProvider theme={light}>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+    </ThemeProvider>
   );
 }
-
-const Button = styled.button`
-  display: inline-block;
-  color: #bf4f74;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #bf4f74;
-  border-radius: 3px;
-  display: block;
-`;
 
 export default App;
