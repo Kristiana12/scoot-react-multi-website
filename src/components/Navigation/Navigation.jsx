@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { NavigationLink, Logo, ThemeToggleButton } from '../ExportComponents';
 import { useTheme, styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import devices from '../styles/devices';
 
 const Navigation = ({ setSelectedTheme }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -74,13 +75,12 @@ const Navigation = ({ setSelectedTheme }) => {
         aria-label="Main Menu"
         className={isExpanded ? 'show' : ''}
       >
+        <ThemeToggleButton setSelectedTheme={setSelectedTheme} />
         <ul>{NavigationLinks}</ul>
         <NavLink to="/location" className="btn-primary" onClick={menuHandler}>
           Get Scootin
         </NavLink>
       </StyledNavigation>
-
-      <ThemeToggleButton setSelectedTheme={setSelectedTheme} />
     </StyledHeader>
   );
 };
@@ -89,6 +89,10 @@ const StyledMenuButton = styled.button`
   border: 0;
   background-color: transparent;
   cursor: pointer;
+
+  @media ${devices.tablet} {
+    display: none;
+  }
 `;
 
 export default Navigation;

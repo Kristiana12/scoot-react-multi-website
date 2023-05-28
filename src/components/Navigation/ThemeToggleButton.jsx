@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { light, dark } from '../styles/Theme.styled';
+import devices from '../styles/devices';
 
 const ThemeToggleButton = ({ setSelectedTheme }) => {
   const toggleThemeHandler = () => {
@@ -17,9 +18,10 @@ const ThemeToggleButton = ({ setSelectedTheme }) => {
 };
 
 const ToggleBtn = styled.div`
-  position: absolute;
-  top: 14px;
-  right: 22px;
+  margin-bottom: 1.5rem;
+  @media ${devices.tablet} {
+    margin-bottom: 0;
+  }
 
   input[type='checkbox'] {
     height: 0;
@@ -31,7 +33,7 @@ const ToggleBtn = styled.div`
     cursor: pointer;
     width: 40px;
     height: 20px;
-    background: ${({ theme }) => theme.colors.heading};
+    background: ${({ theme }) => theme.colors.primary};
     display: block;
     border-radius: 100px;
     position: relative;
@@ -44,13 +46,13 @@ const ToggleBtn = styled.div`
     left: 3px;
     width: 14px;
     height: 14px;
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.textContrast};
     border-radius: 50%;
     transition: 0.3s;
   }
 
   input:checked + label {
-    background: ${({ theme }) => theme.colors.heading};
+    background: ${({ theme }) => theme.colors.primary};
   }
 
   input:checked + label:after {

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import devices from './devices';
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -41,6 +42,10 @@ a {
   font-weight: bold;
   border: 2px solid transparent;
   transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+  @media ${devices.tablet} {
+      padding: 0.875rem 2.5rem;
+    }
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};

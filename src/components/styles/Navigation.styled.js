@@ -8,6 +8,10 @@ export const StyledHeader = styled.header`
   justify-content: center;
   position: relative;
 
+  @media ${devices.tablet} {
+    gap: 1.5rem;
+  }
+
   button {
     position: absolute;
     top: 30px;
@@ -51,9 +55,12 @@ export const StyledNavigation = styled.nav`
     gap: 1.5rem;
     font-weight: bold;
     font-size: 1.125rem;
+    margin-bottom: auto;
 
     @media ${devices.tablet} {
+      align-items: center;
       flex-direction: row;
+      margin: auto;
     }
   }
 `;
