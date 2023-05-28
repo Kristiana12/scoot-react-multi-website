@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {
   About,
   Location,
-  Career,
+  Careers,
   ErrorPage,
 } from './pages/ExportPagesComponents.jsx';
 
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
         element: <Location />,
       },
       {
-        path: '/career',
-        element: <Career />,
+        path: '/careers',
+        element: <Careers />,
       },
     ],
   },

@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import * as theme from './Theme.styled';
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -11,20 +10,46 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.body};
   color: ${({ theme }) => theme.colors.text};
   font-family: monospace;
   overflow-x: hidden;
 }
 
-// theme buttons color
-.light {
-  background-color: ${theme.light.colors.header};
-}
-.dark {
-  background-color: ${theme.dark.colors.header};
+h1,h2,h3,h4,h5,h6, a {
+  font-family: 'Space Mono', monospace;
 }
 
+p, button {
+  font-family: 'Lexend Deca', sans-serif;
+} 
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Utility classes
+
+.btn-primary {
+  padding: 0.875rem;
+  text-align: center;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.textContrast};
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.textContrast};
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+  }
+
+}
 
 `;
 
