@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { styled } from 'styled-components';
+import devices from '../styles/devices';
 
 const NavigationLink = ({ link, setIsExpanded }) => {
   const clickHandler = () => {
@@ -7,8 +8,10 @@ const NavigationLink = ({ link, setIsExpanded }) => {
   };
 
   return (
-    <li onClick={clickHandler}>
-      <StyledNavLink to={`/${link}`}>{link}</StyledNavLink>
+    <li className="menu-item">
+      <StyledNavLink onClick={clickHandler} to={`/${link}`}>
+        {link}
+      </StyledNavLink>
     </li>
   );
 };
@@ -17,6 +20,10 @@ const StyledNavLink = styled(NavLink)`
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.textContrast};
   position: relative;
+
+  @media ${devices.tablet} {
+    color: ${({ theme }) => theme.colors.text};
+  }
 
   &::after {
     content: '';

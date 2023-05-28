@@ -1,14 +1,18 @@
-import { Navigation, Footer } from './components/ExportComponents';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { light, dark } from './components/styles/Theme.styled';
 import { Outlet } from 'react-router-dom';
+
+import { Navigation, Footer } from './components/ExportComponents';
 import GlobalStyles from './components/styles/Global';
+import { light } from './components/styles/Theme.styled';
 
 function App() {
+  const [selectedTheme, setSelectedTheme] = useState(light);
+
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={selectedTheme}>
       <GlobalStyles />
-      <Navigation />
+      <Navigation setSelectedTheme={setSelectedTheme} />
       <Outlet />
       <Footer />
     </ThemeProvider>

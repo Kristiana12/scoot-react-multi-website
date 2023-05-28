@@ -33,7 +33,6 @@ a {
 }
 
 //Utility classes
-
 .btn-primary {
   padding: 0.875rem;
   text-align: center;
@@ -48,8 +47,8 @@ a {
     background-color: ${({ theme }) => theme.colors.textContrast};
     border: 2px solid ${({ theme }) => theme.colors.primary};
   }
-
 }
+
 
 `;
 
