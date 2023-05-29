@@ -1,30 +1,36 @@
 import { StyledNavigation, StyledHeader } from '../styles/Navigation.styled';
 import { useState, useEffect } from 'react';
-import { NavigationLink, Logo, ThemeToggleButton } from '../ExportComponents';
-import { useTheme, styled } from 'styled-components';
+import {
+  NavigationLink,
+  Logo,
+  LogoDark,
+  ThemeToggleButton,
+  Button,
+} from '../ExportComponents';
+import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import devices from '../styles/devices';
+import useTheme from '../../hooks/useThemeHook';
 
-const Navigation = ({ setSelectedTheme }) => {
+const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  //Pass theme colors to the component
-  const theme = useTheme();
+  const { selectedTheme } = useTheme();
 
-  const links = ['about', 'location', 'careers'];
+  const links = ['about', 'location', 'careers', 'products'];
   const NavigationLinks = links.map((link, i) => (
     <NavigationLink key={i} link={link} setIsExpanded={setIsExpanded} />
   ));
 
-  const SVG = isExpanded ? (
+  const SVGMenu = isExpanded ? (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-      <g style={{ fill: theme.colors.primary }} fillRule="evenodd">
+      <g style={{ fill: selectedTheme.colors.primary }} fillRule="evenodd">
         <path d="M3.19.733l13.923 13.924-2.61 2.61L.579 3.343z" />
         <path d="M.579 14.657L14.503.733l2.61 2.61L3.19 17.267z" />
       </g>
     </svg>
   ) : (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16">
-      <g style={{ fill: theme.colors.primary }} fillRule="evenodd">
+      <g style={{ fill: selectedTheme.colors.primary }} fillRule="evenodd">
         <path d="M0 0h19.692v3.692H0zM0 6.154h19.692v3.692H0zM0 12.308h19.692V16H0z" />
       </g>
     </svg>
@@ -61,12 +67,15 @@ const Navigation = ({ setSelectedTheme }) => {
         aria-controls="main-menu"
         aria-expanded={isExpanded}
       >
-        {SVG}
+        {SVGMenu}
       </StyledMenuButton>
 
       <div className="logo">
         <NavLink to="/">
-          <img src={Logo} alt="scoot" />
+          <img
+            src={selectedTheme.name === 'light-theme' ? Logo : LogoDark}
+            alt="scoot"
+          />
         </NavLink>
       </div>
 
@@ -75,22 +84,18 @@ const Navigation = ({ setSelectedTheme }) => {
         aria-label="Main Menu"
         className={isExpanded ? 'show' : ''}
       >
-        <ThemeToggleButton setSelectedTheme={setSelectedTheme} />
+        <ThemeToggleButton />
         <ul>{NavigationLinks}</ul>
-        <NavLink to="/location" className="btn-primary" onClick={menuHandler}>
+        <Button to="/products" className="btn-primary" onClick={menuHandler}>
           Get Scootin
-        </NavLink>
+        </Button>
       </StyledNavigation>
     </StyledHeader>
   );
 };
 
 const StyledMenuButton = styled.button`
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     display: none;
   }
 `;

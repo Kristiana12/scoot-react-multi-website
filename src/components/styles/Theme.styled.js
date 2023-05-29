@@ -4,6 +4,7 @@ export const light = {
     body: '#fff',
     primary: '#FCB72B',
     background: '#E5ECF4',
+    navigationBackground: '#495567',
     heading: '#495567',
     text: '#939CAA',
     textContrast: '#fff',
@@ -14,11 +15,12 @@ export const light = {
 export const dark = {
   name: 'dark-theme',
   colors: {
-    body: '#000',
-    primary: 'green',
+    body: '#0B2447',
+    primary: '#46C2CB',
+    navigationBackground: '#19376D',
     background: '#333',
     heading: '#495567',
-    text: '#939CAA',
+    text: '#fff',
     textContrast: '#fff',
   },
 };

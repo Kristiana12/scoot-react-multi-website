@@ -6,8 +6,10 @@ import {
   About,
   Location,
   Careers,
+  Products,
   ErrorPage,
 } from './pages/ExportPagesComponents.jsx';
+import AppThemeProvider from './context/theme-context.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +29,18 @@ const router = createBrowserRouter([
         path: '/careers',
         element: <Careers />,
       },
+      {
+        path: '/products',
+        element: <Products />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppThemeProvider>
+      <RouterProvider router={router} />
+    </AppThemeProvider>
   </React.StrictMode>
 );

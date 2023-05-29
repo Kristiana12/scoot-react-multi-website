@@ -21,7 +21,7 @@ const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.textContrast};
   position: relative;
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     color: ${({ theme }) => theme.colors.text};
   }
 

@@ -8,16 +8,16 @@ export const StyledHeader = styled.header`
   justify-content: center;
   position: relative;
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     gap: 1.5rem;
   }
 
-  button {
+  button#menu-button {
     position: absolute;
     top: 30px;
     left: 22px;
 
-    @media ${devices.tablet} {
+    @media ${devices.laptop} {
       position: static;
     }
   }
@@ -31,13 +31,18 @@ export const StyledNavigation = styled.nav`
   width: 80%;
   min-height: calc(100vh - 79px);
   padding: 4rem 2rem 1.5rem;
-  background-color: ${({ theme }) => theme.colors.heading};
+  background-color: ${({ theme }) => theme.colors.navigationBackground};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   @media ${devices.tablet} {
+    width: 100%;
+    align-items: center;
+  }
+
+  @media ${devices.laptop} {
     position: static;
     min-height: auto;
     flex-direction: row;
@@ -58,6 +63,11 @@ export const StyledNavigation = styled.nav`
     margin-bottom: auto;
 
     @media ${devices.tablet} {
+      gap: 2.5rem;
+      text-align: center;
+    }
+
+    @media ${devices.laptop} {
       align-items: center;
       flex-direction: row;
       margin: auto;

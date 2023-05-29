@@ -33,6 +33,13 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
 //Utility classes
 .btn-primary {
   padding: 0.875rem;

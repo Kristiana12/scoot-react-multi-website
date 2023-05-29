@@ -1,20 +1,24 @@
-import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Outlet } from 'react-router-dom';
-
-import { Navigation, Footer } from './components/ExportComponents';
+import { Navigation, Footer, Container } from './components/ExportComponents';
 import GlobalStyles from './components/styles/Global';
-import { light } from './components/styles/Theme.styled';
+import { useLocation, Outlet } from 'react-router-dom';
+import useTheme from './hooks/useThemeHook';
+import Home from './pages/Home';
 
 function App() {
-  const [selectedTheme, setSelectedTheme] = useState(light);
+  const { selectedTheme } = useTheme();
+  let location = useLocation();
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      <GlobalStyles />
-      <Navigation setSelectedTheme={setSelectedTheme} />
-      <Outlet />
-      <Footer />
+      <div className="">
+        <GlobalStyles />
+        <Container className="small">
+          <Navigation />
+        </Container>
+        {location.pathname === '/' ? <Home /> : <Outlet />}
+        <Footer />
+      </div>
     </ThemeProvider>
   );
 }
