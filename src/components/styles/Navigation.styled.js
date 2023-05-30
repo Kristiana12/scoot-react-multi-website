@@ -15,8 +15,9 @@ export const StyledHeader = styled.header`
 
   button#menu-button {
     position: fixed;
-    top: 30px;
-    left: 22px;
+    /* position: absolute; */
+    top: 25px;
+    left: 32px;
     z-index: 150;
 
     @media ${devices.laptop} {
@@ -30,10 +31,10 @@ export const StyledNavigation = styled.nav`
   z-index: 100;
   left: -100%;
   top: 77px;
-
+  top: 0;
   width: 80%;
-  min-height: calc(100vh - 77px);
-
+  /* min-height: calc(100vh - 77px); */
+  min-height: 100vh;
   padding: 4rem 2rem 1.5rem;
   background-color: ${({ theme }) => theme.colors.navigationBackground};
   display: flex;
