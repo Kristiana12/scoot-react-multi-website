@@ -3,7 +3,7 @@ import HeroImgTablet from '../assets/images/home-hero-tablet.jpg';
 import HeroImgDesktop from '../assets/images/home-hero-desktop.jpg';
 import useTheme from '../hooks/useThemeHook';
 import useHeroSection from '../hooks/useHeroSection';
-import { Services } from '../components/ExportComponents';
+import { Services, Container } from '../components/ExportComponents';
 
 const Home = () => {
   const { selectedTheme } = useTheme();
@@ -40,10 +40,10 @@ const Home = () => {
   const heroSection = useHeroSection(content);
 
   return (
-    <>
+    <Container>
       {heroSection}
       <Services />
-    </>
+    </Container>
   );
 };
 

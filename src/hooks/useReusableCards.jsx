@@ -31,6 +31,13 @@ const StyledSection = styled.div`
 
   //Services
   &.section-services {
+    @media ${devices.desktop} {
+      flex-direction: row;
+      gap: 1.875rem;
+      width: min(90%, 1110px);
+      margin: 0 auto;
+    }
+
     & .service-card {
       text-align: center;
       width: min(90%, 310px);
@@ -48,6 +55,12 @@ const StyledSection = styled.div`
         width: min(90%, 600px);
         position: relative;
 
+        @media ${devices.desktop} {
+          display: flex;
+          justify-content: center;
+          width: min(90%, 380px);
+        }
+
         &::before {
           content: '';
           z-index: -1;
@@ -57,6 +70,12 @@ const StyledSection = styled.div`
           width: 18px;
           height: 100%;
           background-color: ${({ theme }) => theme.colors.background};
+
+          @media ${devices.desktop} {
+            left: -10px;
+            transform: rotate(270deg);
+            transform-origin: bottom right;
+          }
         }
 
         .image {

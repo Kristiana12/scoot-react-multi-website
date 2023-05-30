@@ -6,8 +6,9 @@ const Container = ({ children, className }) => {
 };
 
 const StyledContainer = styled.div`
-  width: min(90%, 1440px);
+  width: min(100%, 1440px);
   margin: 0 auto;
+  overflow: hidden;
 
   &.small {
     width: min(90%, 1100px);
