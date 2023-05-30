@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import devices from './devices';
 
 export const StyledHeader = styled.header`
-  padding: 1.375rem 2rem;
+  padding: 1.375rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,9 +68,10 @@ export const StyledNavigation = styled.nav`
     }
 
     @media ${devices.laptop} {
+      font-size: 1rem;
       align-items: center;
       flex-direction: row;
-      margin: auto;
+      margin: auto auto auto 3.5rem;
     }
   }
 `;

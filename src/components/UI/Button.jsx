@@ -13,11 +13,12 @@ const Button = ({ children, className, to, onClick }) => {
 
 const StyledButton = styled(NavLink)`
   &.btn-primary {
-    padding: 0.875rem;
+    display: inline-block;
+    padding: 0.875rem 2.5rem;
     text-align: center;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.textContrast};
-    font-weight: bold;
+    font-weight: 600;
     border: 2px solid transparent;
     transition: color 0.3s, background-color 0.3s, border 0.3s;
 

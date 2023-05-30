@@ -3,7 +3,6 @@ export { default as NavigationLink } from './Navigation/NavigationLink.jsx';
 export { default as ThemeToggleButton } from './Navigation/ThemeToggleButton';
 
 export { default as Footer } from './layout/Footer';
-export { default as HeroSection } from './layout/Hero';
 
 export { default as Button } from './UI/Button';
 export { default as Container } from './UI/Container';
@@ -14,6 +13,8 @@ export { default as LogoDark } from '../assets/logo-dark.svg';
 
 export { default as SunSVG } from '../assets/theme/sun.svg';
 export { default as MoonSVG } from '../assets/theme/moon.svg';
+
+export { default as IconCircles } from '../assets/patterns/white-circles.svg';
 
 //Images
 export { default as HeroImgMobile } from '../assets/images/home-hero-mobile.jpg';
