@@ -11,6 +11,7 @@ export const light = {
     textContrast: '#fff',
     overlay: 'rgba(0, 0, 0, 0.75)',
     iconColor: '#495567',
+    footer: '#333A44',
   },
 };
 
@@ -26,5 +27,6 @@ export const dark = {
     text: '#9DB2BF',
     textContrast: '#fff',
     iconColor: '#21325E',
+    footer: '#333A44',
   },
 };

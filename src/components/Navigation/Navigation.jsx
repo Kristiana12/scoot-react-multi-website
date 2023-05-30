@@ -1,22 +1,18 @@
-import { StyledNavigation, StyledHeader } from '../styles/Navigation.styled';
 import { useState, useEffect } from 'react';
-import { NavigationLink, ThemeToggleButton, Button } from '../ExportComponents';
+import { NavLink } from 'react-router-dom';
+import { StyledNavigation, StyledHeader } from '../styles/Navigation.styled';
+import { ThemeToggleButton, Button } from '../ExportComponents';
 import Logo from '../../assets/logo.svg';
 import LogoDark from '../../assets/logo-dark.svg';
 import { styled } from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import devices from '../styles/devices';
 import useTheme from '../../hooks/useThemeHook';
-import { v4 as uuidv4 } from 'uuid';
+import useNavigation from '../../hooks/useNavigation';
 
 const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { selectedTheme } = useTheme();
-
-  const links = ['about', 'location', 'careers', 'products'];
-  const NavigationLinks = links.map((link) => (
-    <NavigationLink key={uuidv4()} link={link} setIsExpanded={setIsExpanded} />
-  ));
+  const navigation = useNavigation('header', setIsExpanded);
 
   const SVGMenu = isExpanded ? (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
@@ -89,7 +85,7 @@ const Navigation = () => {
         className={isExpanded ? 'show' : ''}
       >
         <ThemeToggleButton onClick={menuHandler} />
-        <ul>{NavigationLinks}</ul>
+        {navigation}
         <Button to="/products" className="btn-primary" onClick={menuHandler}>
           Get Scootin
         </Button>

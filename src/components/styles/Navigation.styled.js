@@ -15,7 +15,6 @@ export const StyledHeader = styled.header`
 
   button#menu-button {
     position: fixed;
-    /* position: absolute; */
     top: 0;
     left: 0;
     padding: 23.1px 36px;
@@ -35,7 +34,6 @@ export const StyledNavigation = styled.nav`
   top: 77px;
   top: 0;
   width: 80%;
-  /* min-height: calc(100vh - 77px); */
   min-height: 100vh;
   padding: 6.5rem 2rem 1.5rem;
   background-color: ${({ theme }) => theme.colors.navigationBackground};
@@ -62,10 +60,7 @@ export const StyledNavigation = styled.nav`
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
     gap: 1.5rem;
-    font-weight: bold;
     font-size: 1.125rem;
     margin-bottom: auto;
 

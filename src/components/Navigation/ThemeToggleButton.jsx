@@ -27,6 +27,15 @@ const ThemeToggleButton = ({ onClick }) => {
 const ToggleBtn = styled.button`
   margin-bottom: 1.5rem;
   width: 26px;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: auto;
+  }
 
   @media ${devices.tablet} {
     margin-bottom: 2.5rem;

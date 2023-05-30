@@ -10,7 +10,7 @@ const AppStore = () => {
   const { selectedTheme } = useTheme();
   return (
     <StyledAppStore>
-      <Container className="small">
+      <StyledMainContainer className="small">
         <StyledTitle>Sign up and Scoot off today</StyledTitle>
         <StyledStoreContainer>
           <StyledLink to="https://www.apple.com/at/store" target="_blank">
@@ -59,7 +59,7 @@ const AppStore = () => {
             </g>
           </svg>
         </StyledImageContainer>
-      </Container>
+      </StyledMainContainer>
     </StyledAppStore>
   );
 };
@@ -72,6 +72,42 @@ const StyledAppStore = styled.section`
   z-index: 2;
 `;
 
+const StyledMainContainer = styled(Container)`
+  @media ${devices.desktop} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+`;
+
+const StyledStoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+
+  @media ${devices.desktop} {
+    margin-left: auto;
+    gap: 1.125rem;
+  }
+`;
+
+const StyledTitle = styled.h3`
+  font-size: 1.85rem;
+  color: ${({ theme }) => theme.colors.textContrast};
+  max-width: 460px;
+  margin: auto;
+  margin-bottom: 2.5rem;
+
+  @media ${devices.tablet} {
+    font-size: 3rem;
+  }
+  @media ${devices.desktop} {
+    margin-left: 0;
+  }
+`;
+
 const StyledLink = styled(Link)`
   display: block;
   transition: transform 0.4s;
@@ -81,28 +117,11 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledStoreContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.85rem;
-`;
-
 const StyledImageContainer = styled.div`
   position: absolute;
   right: -200px;
   bottom: 0;
   z-index: -1;
-`;
-
-const StyledTitle = styled.h3`
-  font-size: 1.85rem;
-  color: ${({ theme }) => theme.colors.textContrast};
-  margin-bottom: 2.5rem;
-
-  @media ${devices.tablet} {
-    font-size: 3rem;
-  }
 `;
 
 export default AppStore;

@@ -1,6 +1,5 @@
 //Navigation
 export { default as Navigation } from './Navigation/Navigation';
-export { default as NavigationLink } from './Navigation/NavigationLink.jsx';
 export { default as ThemeToggleButton } from './Navigation/ThemeToggleButton';
 
 //Layouts

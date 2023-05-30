@@ -55,9 +55,6 @@ section {
 
 
 
-
-
-
 `;
 
 export default GlobalStyles;
