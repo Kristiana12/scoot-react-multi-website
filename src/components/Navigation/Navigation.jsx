@@ -14,7 +14,7 @@ const Navigation = () => {
   const { selectedTheme } = useTheme();
 
   const links = ['about', 'location', 'careers', 'products'];
-  const NavigationLinks = links.map((link, i) => (
+  const NavigationLinks = links.map((link) => (
     <NavigationLink key={uuidv4()} link={link} setIsExpanded={setIsExpanded} />
   ));
 
@@ -81,7 +81,7 @@ const Navigation = () => {
         aria-label="Main Menu"
         className={isExpanded ? 'show' : ''}
       >
-        <ThemeToggleButton />
+        <ThemeToggleButton onClick={menuHandler} />
         <ul>{NavigationLinks}</ul>
         <Button to="/products" className="btn-primary" onClick={menuHandler}>
           Get Scootin

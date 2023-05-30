@@ -4,11 +4,17 @@ import useTheme from '../../hooks/useThemeHook';
 import SunSVG from '../../assets/theme/sun.svg';
 import MoonSVG from '../../assets/theme/moon.svg';
 
-const ThemeToggleButton = () => {
+const ThemeToggleButton = ({ onClick }) => {
   const { selectedTheme, toggleTheme } = useTheme();
 
   return (
-    <ToggleBtn title="toggle Theme" onClick={toggleTheme}>
+    <ToggleBtn
+      title="toggle Theme"
+      onClick={() => {
+        toggleTheme();
+        onClick();
+      }}
+    >
       <img
         src={`${selectedTheme.name === 'light-theme' ? SunSVG : MoonSVG}`}
         alt="toggle theme"

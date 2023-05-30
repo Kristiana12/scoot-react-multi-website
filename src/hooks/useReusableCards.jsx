@@ -10,7 +10,7 @@ const useReusableCards = (cardArr, sectionClass) => {
         {card.image && <img src="" alt="" />}
         {card.icon && <div className="card-icon">{card.icon}</div>}
       </div>
-      <h2 className={card.titleClass}>{card.title}</h2>
+      <StyledTitle className={card.titleClass}>{card.title}</StyledTitle>
       <p>{card.paragraph}</p>
       {card.button && (
         <Button to={card.urlLocation} className={card.buttonClass}>
@@ -25,14 +25,14 @@ const useReusableCards = (cardArr, sectionClass) => {
 
 const StyledSection = styled.div`
   padding-top: 7.5rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
+  //Services
   &.section-services {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-
-    .service-card {
+    & .service-card {
+      text-align: center;
       width: min(90%, 310px);
       margin: 0 auto;
       display: flex;
@@ -40,10 +40,40 @@ const StyledSection = styled.div`
       gap: 1.5rem;
 
       @media ${devices.tablet} {
+        text-align: left;
         display: grid;
         grid-template-columns: min-content 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        gap: 1.5rem 5rem;
+        width: min(90%, 600px);
+        position: relative;
+
+        &::before {
+          content: '';
+          z-index: -1;
+          position: absolute;
+          top: -85%;
+          left: 39px;
+          width: 18px;
+          height: 100%;
+          background-color: ${({ theme }) => theme.colors.background};
+        }
+
+        .image {
+          grid-row: 1 / -1;
+        }
       }
+    }
+  }
+`;
+
+const StyledTitle = styled.h2`
+  color: ${({ theme }) => theme.colors.heading};
+
+  &.section-title-s {
+    font-size: 1.25rem;
+    @media ${devices.tablet} {
+      font-size: 1.5rem;
     }
   }
 `;
