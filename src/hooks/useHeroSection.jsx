@@ -1,8 +1,10 @@
 import { styled } from 'styled-components';
 import useResponsiveImages from './useResponsiveImage';
-import { Button, IconCircles, IconLine } from '../components/ExportComponents';
+import { Button } from '../components/ExportComponents';
 import devices from '../components/styles/devices';
 import { useLocation } from 'react-router-dom';
+import IconCircles from '../assets/patterns/white-circles.svg';
+import IconLine from '../assets/patterns/line.svg';
 
 const useHeroSection = ({
   heroImages,
@@ -52,6 +54,7 @@ const StyledSection = styled.section`
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 
   //Just for HOME PAGE
   &.home {

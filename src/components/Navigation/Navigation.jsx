@@ -1,12 +1,8 @@
 import { StyledNavigation, StyledHeader } from '../styles/Navigation.styled';
 import { useState, useEffect } from 'react';
-import {
-  NavigationLink,
-  Logo,
-  LogoDark,
-  ThemeToggleButton,
-  Button,
-} from '../ExportComponents';
+import { NavigationLink, ThemeToggleButton, Button } from '../ExportComponents';
+import Logo from '../../assets/logo.svg';
+import LogoDark from '../../assets/logo-dark.svg';
 import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import devices from '../styles/devices';

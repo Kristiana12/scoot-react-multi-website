@@ -1,11 +1,9 @@
-import {
-  HeroImgMobile,
-  HeroImgTablet,
-  HeroImgDesktop,
-  Services,
-} from '../components/ExportComponents';
+import HeroImgMobile from '../assets/images/home-hero-mobile.jpg';
+import HeroImgTablet from '../assets/images/home-hero-tablet.jpg';
+import HeroImgDesktop from '../assets/images/home-hero-desktop.jpg';
 import useTheme from '../hooks/useThemeHook';
 import useHeroSection from '../hooks/useHeroSection';
+import { Services } from '../components/ExportComponents';
 
 const Home = () => {
   const { selectedTheme } = useTheme();

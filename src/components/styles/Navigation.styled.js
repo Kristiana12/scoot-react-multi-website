@@ -15,9 +15,12 @@ export const StyledHeader = styled.header`
 
   button#menu-button {
     position: fixed;
+
     /* position: absolute; */
-    top: 25px;
-    left: 32px;
+    top: 0;
+    left: 0;
+    padding: 23px 36px;
+    background-color: ${({ theme }) => theme.colors.body};
     z-index: 150;
 
     @media ${devices.laptop} {

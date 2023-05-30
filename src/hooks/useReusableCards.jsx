@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { Button } from '../components/ExportComponents';
 import { styled } from 'styled-components';
+import devices from '../components/styles/devices';
 
 const useReusableCards = (cardArr, sectionClass) => {
   const cards = cardArr.map((card) => (
@@ -37,6 +38,12 @@ const StyledSection = styled.div`
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
+      @media ${devices.tablet} {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: repeat(2, 1fr);
+      }
     }
   }
 `;

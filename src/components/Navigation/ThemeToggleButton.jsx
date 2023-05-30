@@ -1,7 +1,8 @@
 import { styled } from 'styled-components';
 import devices from '../styles/devices';
-import { SunSVG, MoonSVG } from '../ExportComponents';
 import useTheme from '../../hooks/useThemeHook';
+import SunSVG from '../../assets/theme/sun.svg';
+import MoonSVG from '../../assets/theme/moon.svg';
 
 const ThemeToggleButton = () => {
   const { selectedTheme, toggleTheme } = useTheme();
