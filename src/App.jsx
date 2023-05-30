@@ -15,7 +15,7 @@ function App() {
       <Container className="small">
         <Navigation />
       </Container>
-      {location.pathname === '/' ? <Home /> : <Outlet />}
+      <main>{location.pathname === '/' ? <Home /> : <Outlet />}</main>
       <Footer />
     </ThemeProvider>
   );

@@ -15,11 +15,10 @@ export const StyledHeader = styled.header`
 
   button#menu-button {
     position: fixed;
-
     /* position: absolute; */
     top: 0;
     left: 0;
-    padding: 23px 36px;
+    padding: 23.1px 36px;
     background-color: ${({ theme }) => theme.colors.body};
     z-index: 150;
 
@@ -38,7 +37,7 @@ export const StyledNavigation = styled.nav`
   width: 80%;
   /* min-height: calc(100vh - 77px); */
   min-height: 100vh;
-  padding: 4rem 2rem 1.5rem;
+  padding: 6.5rem 2rem 1.5rem;
   background-color: ${({ theme }) => theme.colors.navigationBackground};
   display: flex;
   flex-direction: column;

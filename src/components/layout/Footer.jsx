@@ -1,5 +1,12 @@
+import { AppStore } from '../ExportComponents';
+
 const Footer = () => {
-  return <footer>Footer</footer>;
+  return (
+    <>
+      <AppStore />
+      <footer>Footer</footer>;
+    </>
+  );
 };
 
 export default Footer;

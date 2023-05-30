@@ -41,6 +41,16 @@ button {
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  padding-top: 7.5rem;
+}
+
 //Utility classes
 
 

@@ -26,6 +26,7 @@ const ThemeToggleButton = ({ onClick }) => {
 
 const ToggleBtn = styled.button`
   margin-bottom: 1.5rem;
+  width: 26px;
 
   @media ${devices.tablet} {
     margin-bottom: 2.5rem;

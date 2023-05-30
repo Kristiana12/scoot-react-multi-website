@@ -59,6 +59,13 @@ const Navigation = () => {
   return (
     <StyledHeader>
       <StyledMenuButton
+        style={{
+          background: `${
+            isExpanded
+              ? selectedTheme.colors.navigationBackground
+              : selectedTheme.colors.body
+          }`,
+        }}
         id="menu-button"
         onClick={menuHandler}
         aria-controls="main-menu"
