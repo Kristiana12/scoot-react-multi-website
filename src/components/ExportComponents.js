@@ -15,6 +15,7 @@ export { default as SunSVG } from '../assets/theme/sun.svg';
 export { default as MoonSVG } from '../assets/theme/moon.svg';
 
 export { default as IconCircles } from '../assets/patterns/white-circles.svg';
+export { default as IconLine } from '../assets/patterns/line.svg';
 
 //Images
 export { default as HeroImgMobile } from '../assets/images/home-hero-mobile.jpg';

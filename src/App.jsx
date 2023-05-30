@@ -11,14 +11,12 @@ function App() {
 
   return (
     <ThemeProvider theme={selectedTheme}>
-      <div className="">
-        <GlobalStyles />
-        <Container className="small">
-          <Navigation />
-        </Container>
-        {location.pathname === '/' ? <Home /> : <Outlet />}
-        <Footer />
-      </div>
+      <GlobalStyles />
+      <Container className="small">
+        <Navigation />
+      </Container>
+      {location.pathname === '/' ? <Home /> : <Outlet />}
+      <Footer />
     </ThemeProvider>
   );
 }
