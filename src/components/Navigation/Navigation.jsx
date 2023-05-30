@@ -11,6 +11,7 @@ import { styled } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import devices from '../styles/devices';
 import useTheme from '../../hooks/useThemeHook';
+import { v4 as uuidv4 } from 'uuid';
 
 const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -18,7 +19,7 @@ const Navigation = () => {
 
   const links = ['about', 'location', 'careers', 'products'];
   const NavigationLinks = links.map((link, i) => (
-    <NavigationLink key={i} link={link} setIsExpanded={setIsExpanded} />
+    <NavigationLink key={uuidv4()} link={link} setIsExpanded={setIsExpanded} />
   ));
 
   const SVGMenu = isExpanded ? (

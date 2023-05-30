@@ -1,11 +1,17 @@
+//Navigation
 export { default as Navigation } from './Navigation/Navigation';
 export { default as NavigationLink } from './Navigation/NavigationLink.jsx';
 export { default as ThemeToggleButton } from './Navigation/ThemeToggleButton';
 
+//Layouts
 export { default as Footer } from './layout/Footer';
 
+//UI
 export { default as Button } from './UI/Button';
 export { default as Container } from './UI/Container';
+
+//Services
+export { default as Services } from './Services/Services';
 
 //Icons
 export { default as Logo } from '../assets/logo.svg';

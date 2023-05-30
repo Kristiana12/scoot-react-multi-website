@@ -16,7 +16,6 @@ const useHeroSection = ({
 }) => {
   const result = useResponsiveImages(heroImages);
   const location = useLocation();
-  console.log(location);
 
   return (
     <StyledSection className={location.pathname === '/' ? 'home' : 'section'}>
@@ -54,7 +53,7 @@ const StyledSection = styled.section`
   max-width: 1440px;
   margin: 0 auto;
 
-  //Just for home styling
+  //Just for HOME PAGE
   &.home {
     & > .content {
       position: relative;
@@ -122,6 +121,7 @@ const StyledSection = styled.section`
     }
   }
 
+  //ALL PAGES
   .hero-image {
     position: absolute;
     top: 0;

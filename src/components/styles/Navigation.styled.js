@@ -7,15 +7,17 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 100;
 
   @media ${devices.laptop} {
     gap: 1.5rem;
   }
 
   button#menu-button {
-    position: absolute;
+    position: fixed;
     top: 30px;
     left: 22px;
+    z-index: 150;
 
     @media ${devices.laptop} {
       position: static;
@@ -27,9 +29,11 @@ export const StyledNavigation = styled.nav`
   position: fixed;
   z-index: 100;
   left: -100%;
-  top: 79px;
+  top: 77px;
+
   width: 80%;
-  min-height: calc(100vh - 79px);
+  min-height: calc(100vh - 77px);
+
   padding: 4rem 2rem 1.5rem;
   background-color: ${({ theme }) => theme.colors.navigationBackground};
   display: flex;

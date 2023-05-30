@@ -9,6 +9,7 @@ export const light = {
     text: '#939CAA',
     textContrast: '#fff',
     overlay: 'rgba(0, 0, 0, 0.75)',
+    iconColor: '#495567',
   },
 };
 
@@ -22,5 +23,6 @@ export const dark = {
     heading: '#495567',
     text: '#fff',
     textContrast: '#fff',
+    iconColor: '#fff',
   },
 };

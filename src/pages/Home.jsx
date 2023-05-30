@@ -2,6 +2,7 @@ import {
   HeroImgMobile,
   HeroImgTablet,
   HeroImgDesktop,
+  Services,
 } from '../components/ExportComponents';
 import useTheme from '../hooks/useThemeHook';
 import useHeroSection from '../hooks/useHeroSection';
@@ -40,7 +41,12 @@ const Home = () => {
 
   const heroSection = useHeroSection(content);
 
-  return <>{heroSection}</>;
+  return (
+    <>
+      {heroSection}
+      <Services />
+    </>
+  );
 };
 
 export default Home;
