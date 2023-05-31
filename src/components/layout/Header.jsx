@@ -68,7 +68,10 @@ const Header = ({ data }) => {
   const location = useLocation();
   return (
     <StyledHeader className={location.pathname === '/' ? 'home' : 'page'}>
-      <HeaderContent data={data} />
+      <HeaderContent
+        data={data}
+        $page={location.pathname === '/' ? 'home' : 'page'}
+      />
       <HeaderImage data={data} />
       <HeaderIcon data={data} />
     </StyledHeader>
