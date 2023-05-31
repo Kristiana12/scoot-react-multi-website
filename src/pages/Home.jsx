@@ -48,7 +48,6 @@ const Home = () => {
       {heroSection}
       <Services />
       <HomeFeatures />
-      <section></section>
     </Container>
   );
 };

@@ -138,6 +138,20 @@ const StyledSection = styled.section`
         }
       }
 
+      //About Page
+      &.about {
+        .card-icon {
+          top: 130px;
+          transform: rotateX(180deg);
+        }
+      }
+      //About Page
+      &.about:nth-child(2) {
+        .card-icon {
+          left: -650px;
+        }
+      }
+
       //Arrow Icon 1
       .card-icon {
         position: absolute;

@@ -51,6 +51,10 @@ section {
   padding-top: 7.5rem;
 }
 
+main {
+  padding-bottom: 7.5rem;
+}
+
 ::selection {
   color: ${({ theme }) => theme.colors.textContrast};
   background-color: ${({ theme }) => theme.colors.primary};

@@ -12,6 +12,7 @@ export const light = {
     overlay: 'rgba(0, 0, 0, 0.75)',
     iconColor: '#495567',
     shadow: 'rgba(252, 183, 43, 0.2)',
+    footer: '#333A44',
   },
 };
 
@@ -28,5 +29,6 @@ export const dark = {
     textContrast: '#fff',
     iconColor: '#21325E',
     shadow: 'rgba(70, 194, 203, 0.2)',
+    footer: '#0B2447',
   },
 };

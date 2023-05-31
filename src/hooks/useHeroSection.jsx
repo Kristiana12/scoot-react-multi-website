@@ -20,7 +20,7 @@ const useHeroSection = ({
   const location = useLocation();
   const { selectedTheme } = useTheme();
   return (
-    <StyledSection className={location.pathname === '/' ? 'home' : 'section'}>
+    <StyledSection className={location.pathname === '/' ? 'home' : 'page'}>
       <StyledContent className={className ? `${className} content` : 'content'}>
         <StyledTitle>{title}</StyledTitle>
         {paragraph && <p>{paragraph}</p>}
@@ -56,18 +56,54 @@ const useHeroSection = ({
 
 export default useHeroSection;
 
-const StyledSection = styled.section`
+const StyledSection = styled.header`
+  //ALL PAGES
   color: ${({ theme }) => theme.colors.textContrast};
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
 
+  & > .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      object-position: right;
+    }
+  }
+
+  .icon-circles {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: -30px;
+    bottom: 45px;
+
+    @media ${devices.tablet} {
+      display: block;
+    }
+  }
+
   //Just for HOME PAGE
   &.home {
     & > .content {
-      position: relative;
-      z-index: 1;
       padding-top: 7rem;
       padding-bottom: 10rem;
 
@@ -109,7 +145,7 @@ const StyledSection = styled.section`
 
       @media ${devices.desktop} {
         left: 52.5%;
-        bottom: 28%;
+        bottom: 230px;
       }
     }
 
@@ -119,7 +155,7 @@ const StyledSection = styled.section`
         display: block;
         position: absolute;
         z-index: 1;
-        top: 445px;
+        top: 325px;
         left: 0;
       }
     }
@@ -131,36 +167,23 @@ const StyledSection = styled.section`
     }
   }
 
-  //ALL PAGES
-  .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+  //For Other Pages
+  &.page {
+    padding: 3.75rem 0;
 
-    picture {
-      display: block;
-      width: 100%;
-      height: 100%;
+    .content {
+      @media ${devices.tablet} {
+        text-align: left;
+        width: 80%;
+      }
     }
-
-    img {
-      object-position: right;
-    }
-  }
-
-  .icon-circles {
-    display: none;
-
-    @media ${devices.tablet} {
-      position: absolute;
-      z-index: 1;
-      right: -30px;
-      bottom: 45px;
-      display: block;
+    .hero-image {
+      img {
+        height: 100%;
+        @media ${devices.mobile} {
+          object-position: center;
+        }
+      }
     }
   }
 `;

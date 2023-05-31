@@ -1,9 +1,9 @@
 const useResponsiveImages = ({ mobile, tablet, desktop }) => {
   return (
     <picture>
-      <source media="(max-width: 499px)" srcSet={mobile} />
+      <source media="(max-width: 599px)" srcSet={mobile} />
       <source
-        media="(min-width: 500px and max-width='1339px')"
+        media="(min-width: 600px and max-width='1339px')"
         srcSet={tablet}
       />
       <source media="(min-width: 1440px)" srcSet={desktop} />
