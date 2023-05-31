@@ -11,13 +11,15 @@ const useReusableCards = (cardArr, sectionClass) => {
         {card.icon && <div className="card-icon">{card.icon}</div>}
         {card.icon2 && <div className="card-icon2">{card.icon2}</div>}
       </div>
-      <StyledTitle className={card.titleClass}>{card.title}</StyledTitle>
-      <p>{card.paragraph}</p>
-      {card.button && (
-        <Button to={card.urlLocation} className={card.buttonClass}>
-          {card.button}
-        </Button>
-      )}
+      <div className="content">
+        <StyledTitle className={card.titleClass}>{card.title}</StyledTitle>
+        <p>{card.paragraph}</p>
+        {card.button && (
+          <Button to={card.urlLocation} className={card.buttonClass}>
+            {card.button}
+          </Button>
+        )}
+      </div>
     </div>
   ));
 
@@ -32,10 +34,14 @@ const StyledSection = styled.section`
   .card {
     width: min(90%, 310px);
     margin: 0 auto;
+    text-align: center;
+  }
+
+  .content,
+  .card {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    text-align: center;
   }
 
   //Services
@@ -97,6 +103,28 @@ const StyledSection = styled.section`
       gap: 2rem;
       position: relative;
 
+      @media ${devices.tabletL} {
+        flex-direction: row;
+        justify-content: space-between;
+        width: min(90%, 1100px);
+      }
+
+      &:nth-child(odd) {
+        @media ${devices.tabletL} {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .content {
+        align-items: center;
+
+        @media ${devices.tabletL} {
+          flex-basis: 445px;
+          text-align: left;
+          align-items: start;
+        }
+      }
+
       .image {
         width: 310px;
         height: 310px;
@@ -110,6 +138,7 @@ const StyledSection = styled.section`
         }
       }
 
+      //Arrow Icon 1
       .card-icon {
         position: absolute;
         top: 250px;
@@ -120,8 +149,14 @@ const StyledSection = styled.section`
           top: 380px;
           left: -30px;
         }
+
+        @media ${devices.tabletL} {
+          top: 380px;
+          left: 47%;
+        }
       }
 
+      //Background Circle
       .card-icon2 {
         display: none;
 
@@ -132,27 +167,42 @@ const StyledSection = styled.section`
           right: -75%;
           z-index: -1;
         }
+
+        @media ${devices.tabletL} {
+          right: -500px;
+        }
       }
     }
 
+    //Arrow Icon 2
     .features-card:nth-child(2) {
       .card-icon {
         transform: rotateY(180deg);
-        right: 60px;
+        right: 80px;
         top: 0;
 
         @media ${devices.tablet} {
           right: 54%;
         }
+
+        @media ${devices.tabletL} {
+          left: -77%;
+        }
       }
 
+      //Background Circle
       .card-icon2 {
         @media ${devices.tablet} {
           right: 100%;
         }
+
+        @media ${devices.tabletL} {
+          right: 1140px;
+        }
       }
     }
 
+    //Arrow Icon 3
     .features-card:nth-child(3) {
       .card-icon {
         top: 65px;
@@ -161,6 +211,10 @@ const StyledSection = styled.section`
         @media ${devices.tablet} {
           top: 120px;
           left: 50%;
+        }
+
+        @media ${devices.tabletL} {
+          left: 78%;
         }
       }
     }

@@ -4,7 +4,7 @@ import { Button } from '../components/ExportComponents';
 import devices from '../components/styles/devices';
 import { useLocation } from 'react-router-dom';
 import IconCircles from '../assets/patterns/white-circles.svg';
-import IconLine from '../assets/patterns/line.svg';
+import useTheme from './useThemeHook';
 
 const useHeroSection = ({
   heroImages,
@@ -18,7 +18,7 @@ const useHeroSection = ({
 }) => {
   const result = useResponsiveImages(heroImages);
   const location = useLocation();
-
+  const { selectedTheme } = useTheme();
   return (
     <StyledSection className={location.pathname === '/' ? 'home' : 'section'}>
       <StyledContent className={className ? `${className} content` : 'content'}>
@@ -40,7 +40,14 @@ const useHeroSection = ({
       </div>
       {location.pathname === '/' && (
         <div className="icon-line">
-          <img src={IconLine} alt="" arina-hidden="true" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="203" height="15">
+            <path
+              fill="none"
+              style={{ stroke: `${selectedTheme.colors.primary}` }}
+              strokeWidth="15"
+              d="M203 7.5H.5"
+            />
+          </svg>
         </div>
       )}
     </StyledSection>
@@ -101,7 +108,7 @@ const StyledSection = styled.section`
       }
 
       @media ${devices.desktop} {
-        left: 50.5%;
+        left: 52.5%;
         bottom: 28%;
       }
     }
@@ -112,7 +119,7 @@ const StyledSection = styled.section`
         display: block;
         position: absolute;
         z-index: 1;
-        top: 50%;
+        top: 445px;
         left: 0;
       }
     }

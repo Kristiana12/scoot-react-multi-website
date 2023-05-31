@@ -20,7 +20,8 @@ const StyledButton = styled(NavLink)`
     color: ${({ theme }) => theme.colors.textContrast};
     font-weight: 600;
     border: 2px solid transparent;
-    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    transition: color 0.3s, background-color 0.3s, border 0.3s, box-shadow 0.4s,
+      transform 0.4s;
 
     @media ${devices.tablet} {
       padding: 0.875rem 2.5rem;
@@ -30,6 +31,8 @@ const StyledButton = styled(NavLink)`
       color: ${({ theme }) => theme.colors.primary};
       background-color: ${({ theme }) => theme.colors.textContrast};
       border: 2px solid ${({ theme }) => theme.colors.primary};
+      box-shadow: 0 5px 5px ${({ theme }) => theme.colors.shadow};
+      transform: translateY(-4px);
     }
   }
 `;
