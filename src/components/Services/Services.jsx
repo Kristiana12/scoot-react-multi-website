@@ -1,5 +1,5 @@
-import useReusableCards from '../../hooks/useReusableCards';
 import useTheme from '../../hooks/useThemeHook';
+import { Cards } from '../ExportComponents';
 
 const Services = () => {
   const { selectedTheme } = useTheme();
@@ -87,9 +87,7 @@ const Services = () => {
     },
   ];
 
-  const servicesSection = useReusableCards(services, 'section-services');
-
-  return <>{servicesSection}</>;
+  return <Cards dataArr={services} sectionClass="section-services" />;
 };
 
 export default Services;

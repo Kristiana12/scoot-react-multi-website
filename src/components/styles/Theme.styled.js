@@ -19,7 +19,7 @@ export const light = {
 export const dark = {
   name: 'dark-theme',
   colors: {
-    body: '#0B2447',
+    body: '#001E3D',
     primary: '#46C2CB',
     navigationBackground: '#19376D',
     background: '#21325E',
@@ -29,6 +29,6 @@ export const dark = {
     textContrast: '#fff',
     iconColor: '#21325E',
     shadow: 'rgba(70, 194, 203, 0.2)',
-    footer: '#0B2447',
+    footer: '#0a1128',
   },
 };

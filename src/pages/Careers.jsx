@@ -1,7 +1,7 @@
 import HeroImageMobile from '../assets/images/careers-location-hero-mobile.jpg';
 import HeroImageTablet from '../assets/images/careers-locations-hero-tablet.jpg';
 import HeroImageDesktop from '../assets/images/careers-locations-hero-desktop.jpg';
-import useHeroSection from '../hooks/useHeroSection';
+import { Header } from '../components/ExportComponents';
 
 const Careers = () => {
   const content = {
@@ -12,8 +12,7 @@ const Careers = () => {
     },
     title: 'Careers',
   };
-  const careersSection = useHeroSection(content);
-  return <>{careersSection}</>;
+  return <Header data={content} />;
 };
 
 export default Careers;

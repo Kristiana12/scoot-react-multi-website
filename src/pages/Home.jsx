@@ -2,12 +2,12 @@ import HeroImgMobile from '../assets/images/home-hero-mobile.jpg';
 import HeroImgTablet from '../assets/images/home-hero-tablet.jpg';
 import HeroImgDesktop from '../assets/images/home-hero-desktop.jpg';
 import useTheme from '../hooks/useThemeHook';
-import useHeroSection from '../hooks/useHeroSection';
 import {
   Services,
   Container,
   HomeFeatures,
 } from '../components/ExportComponents';
+import { Header } from '../components/ExportComponents';
 
 const Home = () => {
   const { selectedTheme } = useTheme();
@@ -41,11 +41,11 @@ const Home = () => {
     urlLocation: '/products',
   };
 
-  const heroSection = useHeroSection(content);
+  // const heroSection = useHeroSection(content);
 
   return (
     <Container>
-      {heroSection}
+      <Header data={content} />
       <Services />
       <HomeFeatures />
     </Container>

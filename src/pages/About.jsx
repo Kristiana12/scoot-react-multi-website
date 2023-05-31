@@ -1,4 +1,3 @@
-import useHeroSection from '../hooks/useHeroSection';
 import HeroImageMobile from '../assets/images/about-hero-mobile.jpg';
 import HeroImageTablet from '../assets/images/about-hero-tablet.jpg';
 import HeroImageDesktop from '../assets/images/about-hero-desktop.jpg';
@@ -14,10 +13,9 @@ const About = () => {
     title: 'About',
   };
 
-  const heroSection = useHeroSection(content);
   return (
     <Container>
-      {heroSection}
+      <Header data={content} />
       <AboutFeatures />
     </Container>
   );

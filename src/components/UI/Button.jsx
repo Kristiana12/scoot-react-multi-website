@@ -5,7 +5,7 @@ import devices from '../styles/devices';
 const Button = ({ children, className, to, onClick }) => {
   const classes = className ? className : '';
   return (
-    <StyledButton to={to} className={classes} onClick={onClick}>
+    <StyledButton primary to={to} className={classes} onClick={onClick}>
       {children}
     </StyledButton>
   );

@@ -1,32 +1,26 @@
-import { v4 as uuidv4 } from 'uuid';
-import { Button } from '../components/ExportComponents';
 import { styled } from 'styled-components';
-import devices from '../components/styles/devices';
+import devices from '../styles/devices';
 
-const useReusableCards = (cardArr, sectionClass) => {
-  const cards = cardArr.map((card) => (
-    <div className={card.className} key={uuidv4()}>
-      <div className="image">
-        {card.image && <img src={card.image} alt="" />}
-        {card.icon && <div className="card-icon">{card.icon}</div>}
-        {card.icon2 && <div className="card-icon2">{card.icon2}</div>}
-      </div>
-      <div className="content">
-        <StyledTitle className={card.titleClass}>{card.title}</StyledTitle>
-        <p>{card.paragraph}</p>
-        {card.button && (
-          <Button to={card.urlLocation} className={card.buttonClass}>
-            {card.button}
-          </Button>
-        )}
-      </div>
-    </div>
-  ));
+export const StyledTitle = styled.h2`
+  color: ${({ theme }) => theme.colors.heading};
 
-  return <StyledSection className={sectionClass}>{cards}</StyledSection>;
-};
+  &.section-title-s {
+    font-size: 1.25rem;
+    @media ${devices.tablet} {
+      font-size: 1.5rem;
+    }
+  }
 
-const StyledSection = styled.section`
+  &.section-title-l {
+    font-size: 1.85rem;
+    @media ${devices.tablet} {
+      font-size: 3rem;
+    }
+  }
+`;
+
+export const StyledSection = styled.section`
+  //ALL
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -219,7 +213,7 @@ const StyledSection = styled.section`
     //Arrow Icon 3
     .features-card:nth-child(3) {
       .card-icon {
-        top: 65px;
+        top: 140px;
         left: 60px;
 
         @media ${devices.tablet} {
@@ -234,23 +228,3 @@ const StyledSection = styled.section`
     }
   }
 `;
-
-const StyledTitle = styled.h2`
-  color: ${({ theme }) => theme.colors.heading};
-
-  &.section-title-s {
-    font-size: 1.25rem;
-    @media ${devices.tablet} {
-      font-size: 1.5rem;
-    }
-  }
-
-  &.section-title-l {
-    font-size: 1.85rem;
-    @media ${devices.tablet} {
-      font-size: 3rem;
-    }
-  }
-`;
-
-export default useReusableCards;

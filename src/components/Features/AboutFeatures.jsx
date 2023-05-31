@@ -1,7 +1,7 @@
-import useReusableCards from '../../hooks/useReusableCards';
 import useTheme from '../../hooks/useThemeHook';
 import BetterLiving from '../../assets/images/better-living.jpg';
 import DigitalEra from '../../assets/images/digital-era.jpg';
+import { Cards } from '../ExportComponents';
 
 const AboutFeatures = () => {
   const { selectedTheme } = useTheme();
@@ -76,8 +76,7 @@ const AboutFeatures = () => {
     },
   ];
 
-  const featuresSection = useReusableCards(features, 'section-features');
-  return <>{featuresSection}</>;
+  return <Cards dataArr={features} sectionClass="section-features" />;
 };
 
 export default AboutFeatures;

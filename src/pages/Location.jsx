@@ -1,8 +1,7 @@
 import HeroImageMobile from '../assets/images/careers-location-hero-mobile.jpg';
 import HeroImageTablet from '../assets/images/careers-locations-hero-tablet.jpg';
 import HeroImageDesktop from '../assets/images/careers-locations-hero-desktop.jpg';
-import useHeroSection from '../hooks/useHeroSection';
-
+import { Header } from '../components/ExportComponents';
 const Location = () => {
   const content = {
     heroImages: {
@@ -12,8 +11,7 @@ const Location = () => {
     },
     title: 'Locations',
   };
-  const locationsSection = useHeroSection(content);
-  return <>{locationsSection}</>;
+  return <Header data={content} />;
 };
 
 export default Location;

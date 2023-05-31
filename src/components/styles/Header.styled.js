@@ -1,62 +1,7 @@
 import { styled } from 'styled-components';
-import useResponsiveImages from './useResponsiveImage';
-import { Button } from '../components/ExportComponents';
-import devices from '../components/styles/devices';
-import { useLocation } from 'react-router-dom';
-import IconCircles from '../assets/patterns/white-circles.svg';
-import useTheme from './useThemeHook';
+import devices from '../styles/devices';
 
-const useHeroSection = ({
-  heroImages,
-  title,
-  buttonClass,
-  paragraph,
-  button,
-  icon,
-  className,
-  urlLocation,
-}) => {
-  const result = useResponsiveImages(heroImages);
-  const location = useLocation();
-  const { selectedTheme } = useTheme();
-  return (
-    <StyledSection className={location.pathname === '/' ? 'home' : 'page'}>
-      <StyledContent className={className ? `${className} content` : 'content'}>
-        <StyledTitle>{title}</StyledTitle>
-        {paragraph && <p>{paragraph}</p>}
-        {button && (
-          <Button
-            to={urlLocation ? urlLocation : '#'}
-            className={buttonClass ? buttonClass : ''}
-          >
-            {button}
-          </Button>
-        )}
-      </StyledContent>
-      {heroImages && <div className="hero-image">{result}</div>}
-      {icon && <div className="icon">{icon}</div>}
-      <div className="icon-circles">
-        <img src={IconCircles} alt="" arina-hidden="true" />
-      </div>
-      {location.pathname === '/' && (
-        <div className="icon-line">
-          <svg xmlns="http://www.w3.org/2000/svg" width="203" height="15">
-            <path
-              fill="none"
-              style={{ stroke: `${selectedTheme.colors.primary}` }}
-              strokeWidth="15"
-              d="M203 7.5H.5"
-            />
-          </svg>
-        </div>
-      )}
-    </StyledSection>
-  );
-};
-
-export default useHeroSection;
-
-const StyledSection = styled.header`
+export const StyledHeader = styled.header`
   //ALL PAGES
   color: ${({ theme }) => theme.colors.textContrast};
   position: relative;
@@ -145,7 +90,7 @@ const StyledSection = styled.header`
 
       @media ${devices.desktop} {
         left: 52.5%;
-        bottom: 230px;
+        bottom: 250px;
       }
     }
 
@@ -188,7 +133,7 @@ const StyledSection = styled.header`
   }
 `;
 
-const StyledContent = styled.div`
+export const StyledContent = styled.div`
   width: min(95%, 320px);
   margin: 0 auto;
   text-align: center;
@@ -203,7 +148,7 @@ const StyledContent = styled.div`
   }
 `;
 
-const StyledTitle = styled.h1`
+export const StyledTitle = styled.h1`
   font-size: 2.5rem;
 
   @media ${devices.tablet} {

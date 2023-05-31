@@ -1,20 +1,24 @@
+//UI
+export { default as Button } from './UI/Button';
+export { default as Container } from './UI/Container';
+export { default as Cards } from './UI/Cards';
+
 //Navigation
 export { default as Navigation } from './Navigation/Navigation';
 export { default as ThemeToggleButton } from './Navigation/ThemeToggleButton';
 
 //Layouts
 export { default as Footer } from './layout/Footer';
-
-//UI
-export { default as Button } from './UI/Button';
-export { default as Container } from './UI/Container';
+export { default as AppStore } from './layout/AppStore';
+export { default as Header } from './layout/Header';
 
 //Services
 export { default as Services } from './Services/Services';
 export { default as HomeFeatures } from './Features/HomeFeatures';
 export { default as AboutFeatures } from './Features/AboutFeatures';
 
-export { default as AppStore } from './layout/AppStore';
+//Components
+export { default as ResponsiveImages } from './ResponsiveImages';
 
 //Images
 
