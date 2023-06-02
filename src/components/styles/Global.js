@@ -50,7 +50,11 @@ img {
 }
 
 section {
-  padding-top: 7.5rem;
+  padding:7.5rem 2rem 0;
+}
+
+header, footer {
+  padding: 0 1.5rem;
 }
 
 main {

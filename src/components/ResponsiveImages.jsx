@@ -7,7 +7,7 @@ const ResponsiveImages = ({ images }) => {
         srcSet={images.tablet}
       />
       <source media="(min-width: 991px)" srcSet={images.desktop} />
-      <img src={images.tablet} alt="man driving a scooter" />
+      <img src={images.tablet} alt="traffic" />
     </picture>
   );
 };
