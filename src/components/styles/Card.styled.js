@@ -25,6 +25,23 @@ export const StyledSection = styled.section`
   flex-direction: column;
   gap: 3rem;
 
+  @media ${devices.tablet} {
+    gap: 3.5rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.875rem;
+    color: ${({ theme }) => theme.colors.heading};
+    @media ${devices.tablet} {
+      font-size: 3rem;
+    }
+
+    @media ${devices.laptop} {
+      flex: 100%;
+    }
+  }
+
   .card {
     width: min(90%, 310px);
     margin: 0 auto;
@@ -100,7 +117,7 @@ export const StyledSection = styled.section`
       @media ${devices.tabletL} {
         flex-direction: row;
         justify-content: space-between;
-        width: min(90%, 1100px);
+        width: min(95%, 1100px);
       }
 
       &:nth-child(odd) {
@@ -224,6 +241,46 @@ export const StyledSection = styled.section`
         @media ${devices.tabletL} {
           left: 78%;
         }
+      }
+    }
+  }
+
+  //Values
+  &.section-values {
+    @media ${devices.laptop} {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media ${devices.laptop} {
+      gap: 6.6rem;
+    }
+
+    .values-card {
+      gap: 5.4rem;
+
+      @media ${devices.tablet} {
+        width: min(90%, 490px);
+      }
+
+      @media ${devices.laptop} {
+        flex: 33.3;
+      }
+    }
+
+    .image {
+      position: relative;
+      img {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+      }
+
+      .card-icon {
+        position: absolute;
+        left: 50%;
+        bottom: -48px;
+        transform: translateX(-50%);
       }
     }
   }

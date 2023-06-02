@@ -23,10 +23,15 @@ const Card = ({ data }) => {
   );
 };
 
-const Cards = ({ dataArr, sectionClass }) => {
+const Cards = ({ dataArr, sectionClass, sectionTitle }) => {
   const cards = dataArr.map((data) => <Card key={uuidv4()} data={data} />);
 
-  return <StyledSection className={sectionClass}>{cards}</StyledSection>;
+  return (
+    <StyledSection className={sectionClass}>
+      {sectionTitle && <h3>{sectionTitle}</h3>}
+      {cards}
+    </StyledSection>
+  );
 };
 
 export default Cards;

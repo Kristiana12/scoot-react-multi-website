@@ -1,10 +1,15 @@
 import HeroImageMobile from '../assets/images/careers-location-hero-mobile.jpg';
 import HeroImageTablet from '../assets/images/careers-locations-hero-tablet.jpg';
 import HeroImageDesktop from '../assets/images/careers-locations-hero-desktop.jpg';
-import { Header } from '../components/ExportComponents';
+import {
+  Header,
+  CareerFeatures,
+  Container,
+  ValuesSection,
+} from '../components/ExportComponents';
 
 const Careers = () => {
-  const content = {
+  const headerContent = {
     heroImages: {
       mobile: HeroImageMobile,
       tablet: HeroImageTablet,
@@ -12,7 +17,14 @@ const Careers = () => {
     },
     title: 'Careers',
   };
-  return <Header data={content} />;
+
+  return (
+    <Container>
+      <Header data={headerContent} sectionClass="section-features" />
+      <CareerFeatures />
+      <ValuesSection sectionTitle="Why join us?" />
+    </Container>
+  );
 };
 
 export default Careers;

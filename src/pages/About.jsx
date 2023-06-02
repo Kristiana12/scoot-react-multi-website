@@ -9,7 +9,7 @@ import {
 } from '../components/ExportComponents';
 
 const About = () => {
-  const content = {
+  const headerContent = {
     heroImages: {
       mobile: HeroImageMobile,
       tablet: HeroImageTablet,
@@ -20,9 +20,9 @@ const About = () => {
 
   return (
     <Container>
-      <Header data={content} />
+      <Header data={headerContent} />
       <AboutFeatures />
-      <ValuesSection />
+      <ValuesSection sectionTitle="Our values" />
     </Container>
   );
 };

@@ -8,7 +8,7 @@ const useNavigation = (navigationLocation, setIsExpanded) => {
     setIsExpanded((prevState) => !prevState);
   };
 
-  const links = ['about', 'location', 'careers'];
+  const links = ['about', 'locations', 'careers'];
 
   //Main Navigation
   const mainNavigationLinks = links.map((link) => (

@@ -5,13 +5,14 @@ export const StyledHeader = styled.header`
   //ALL PAGES
   color: ${({ theme }) => theme.colors.textContrast};
   position: relative;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   overflow: hidden;
 
   & > .content {
     position: relative;
     z-index: 1;
+    /* max-width: 1440px; */
   }
 
   .hero-image {
