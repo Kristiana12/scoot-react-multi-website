@@ -1,4 +1,4 @@
-import { Cards } from '../ExportComponents';
+import { Cards, Container } from '../ExportComponents';
 import useTheme from '../../hooks/useThemeHook';
 import OurCommunity from '../../assets/images/our-community.jpg';
 import OurIntegrity from '../../assets/images/our-integrity.jpg';
@@ -114,12 +114,15 @@ const Values = ({ sectionTitle }) => {
       className: 'values-card card',
     },
   ];
+
   return (
-    <Cards
-      dataArr={content}
-      sectionClass="section-values"
-      sectionTitle={sectionTitle}
-    />
+    <Container>
+      <Cards
+        dataArr={content}
+        sectionClass="section-values"
+        sectionTitle={sectionTitle}
+      />
+    </Container>
   );
 };
 

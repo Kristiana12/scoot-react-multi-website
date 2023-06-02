@@ -22,7 +22,9 @@ export { default as CareerFeatures } from './Features/CareerFeatures';
 //Components
 export { default as ResponsiveImages } from './ResponsiveImages';
 
-//Images
+//FAQ
+export { default as FaqCards } from './FAQ/FAQCards';
+export { default as Faq } from './FAQ/FAQ';
 
 // export { default as WorldMapMobile } from '../assets/images/world-map-mobile.png';
 // export { default as WorldMapTablet } from '../assets/images/world-map-tablet.png';

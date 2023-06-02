@@ -6,6 +6,7 @@ import {
   AboutFeatures,
   Header,
   ValuesSection,
+  Faq,
 } from '../components/ExportComponents';
 
 const About = () => {
@@ -19,11 +20,14 @@ const About = () => {
   };
 
   return (
-    <Container>
+    <>
       <Header data={headerContent} />
-      <AboutFeatures />
-      <ValuesSection sectionTitle="Our values" />
-    </Container>
+      <Container>
+        <AboutFeatures />
+        <ValuesSection sectionTitle="Our values" />
+        <Faq />
+      </Container>
+    </>
   );
 };
 

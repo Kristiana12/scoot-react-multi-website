@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import devices from './devices';
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -19,6 +20,7 @@ body {
 h1,h2,h3,h4,h5,h6, a {
   font-family: 'Space Mono', monospace;
   line-height: 1.2;
+  color: ${({ theme }) => theme.colors.heading}
 }
 
 p, button {
@@ -60,6 +62,55 @@ main {
   background-color: ${({ theme }) => theme.colors.primary};
 }
 //Utility classes
+.section-title {
+  text-align: center;
+    font-size: 1.875rem;
+    color: ${({ theme }) => theme.colors.heading};
+    @media ${devices.tablet} {
+      font-size: 3rem;
+    }
+}
+
+.title-s {
+  font-size: 1.125rem;
+
+
+  @media ${devices.tablet} {
+      font-size: 1.5rem;
+
+    }
+}
+
+.title-m {
+  font-size: 1.5rem;
+
+
+  @media ${devices.tablet} {
+      font-size: 2.5rem;
+
+    }
+}
+
+@keyframes showFAQ {
+  0%{
+    transform: translateY(-10px);
+  }
+    20% {
+      height: auto;
+      margin-top: 1.5rem;
+    }
+
+    50% {
+      cursor: auto;
+  visibility: visible;
+  transform: translateY(-4px);
+    }
+    100% {
+      opacity: 1;
+    transform: translateY(0px);
+
+    }
+  }
 
 `;
 

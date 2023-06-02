@@ -2,8 +2,6 @@ import { styled } from 'styled-components';
 import devices from '../styles/devices';
 
 export const StyledTitle = styled.h2`
-  color: ${({ theme }) => theme.colors.heading};
-
   &.section-title-s {
     font-size: 1.25rem;
     @media ${devices.tablet} {
@@ -30,13 +28,6 @@ export const StyledSection = styled.section`
   }
 
   h3 {
-    text-align: center;
-    font-size: 1.875rem;
-    color: ${({ theme }) => theme.colors.heading};
-    @media ${devices.tablet} {
-      font-size: 3rem;
-    }
-
     @media ${devices.laptop} {
       flex: 100%;
     }
@@ -248,12 +239,16 @@ export const StyledSection = styled.section`
   //Values
   &.section-values {
     @media ${devices.laptop} {
-      flex-direction: row;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+      h3 {
+        grid-column: 1 / -1;
+      }
     }
 
     @media ${devices.laptop} {
-      gap: 6.6rem;
+      gap: 5rem 0;
     }
 
     .values-card {
@@ -261,10 +256,6 @@ export const StyledSection = styled.section`
 
       @media ${devices.tablet} {
         width: min(90%, 490px);
-      }
-
-      @media ${devices.laptop} {
-        flex: 33.3;
       }
     }
 

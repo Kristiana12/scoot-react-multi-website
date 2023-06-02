@@ -28,7 +28,7 @@ const Cards = ({ dataArr, sectionClass, sectionTitle }) => {
 
   return (
     <StyledSection className={sectionClass}>
-      {sectionTitle && <h3>{sectionTitle}</h3>}
+      {sectionTitle && <h3 className="section-title">{sectionTitle}</h3>}
       {cards}
     </StyledSection>
   );

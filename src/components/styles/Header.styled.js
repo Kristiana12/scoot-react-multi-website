@@ -9,6 +9,10 @@ export const StyledHeader = styled.header`
   margin: 0 auto;
   overflow: hidden;
 
+  h1 {
+    color: ${({ theme }) => theme.colors.textContrast};
+  }
+
   & > .content {
     position: relative;
     z-index: 1;

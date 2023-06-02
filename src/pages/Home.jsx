@@ -4,8 +4,8 @@ import HeroImgDesktop from '../assets/images/home-hero-desktop.jpg';
 import useTheme from '../hooks/useThemeHook';
 import {
   Services,
-  Container,
   HomeFeatures,
+  Container,
 } from '../components/ExportComponents';
 import { Header } from '../components/ExportComponents';
 
@@ -44,11 +44,13 @@ const Home = () => {
   // const heroSection = useHeroSection(content);
 
   return (
-    <Container>
+    <>
       <Header data={content} />
-      <Services />
-      <HomeFeatures />
-    </Container>
+      <Container>
+        <Services />
+        <HomeFeatures />{' '}
+      </Container>
+    </>
   );
 };
 
