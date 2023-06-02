@@ -5,7 +5,6 @@ export const StyledHeader = styled.header`
   //ALL PAGES
   color: ${({ theme }) => theme.colors.textContrast};
   position: relative;
-  /* max-width: 1440px; */
   margin: 0 auto;
   overflow: hidden;
 
@@ -63,7 +62,7 @@ export const StyledHeader = styled.header`
       }
 
       @media ${devices.desktop} {
-        padding-bottom: 11.5rem;
+        padding-bottom: 7.5rem;
       }
 
       p {
@@ -119,12 +118,12 @@ export const StyledHeader = styled.header`
 
   //For Other Pages
   &.page {
-    padding: 3.75rem 0;
+    padding: 3.75rem 1.5rem;
 
     .content {
       @media ${devices.tablet} {
         text-align: left;
-        width: 80%;
+        width: 90%;
       }
     }
     .hero-image {

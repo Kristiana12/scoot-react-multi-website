@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import devices from './devices';
 
 export const StyledHeader = styled.header`
-  padding: 1.375rem 0;
+  padding: 1.375rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

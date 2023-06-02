@@ -26,9 +26,10 @@ export { default as ResponsiveImages } from './ResponsiveImages';
 export { default as FaqCards } from './FAQ/FAQCards';
 export { default as Faq } from './FAQ/FAQ';
 
-// export { default as WorldMapMobile } from '../assets/images/world-map-mobile.png';
-// export { default as WorldMapTablet } from '../assets/images/world-map-tablet.png';
-// export { default as WorldMapDesktop } from '../assets/images/world-map-desktop.png';
+//Positions
+export { default as PositionCards } from './Positions/PositionCards';
+export { default as FreePositions } from './Positions/FreePositions';
 
-// export { default as BetterLiving } from '../assets/images/better-living.jpg';
-// export { default as DigitalEra } from '../assets/images/digital-era.jpg';
+//Location
+export { default as LocationsSection } from './Location/LocationsSection';
+export { default as LocationMap } from './Location/LocationMap';

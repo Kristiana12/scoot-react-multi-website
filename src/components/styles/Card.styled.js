@@ -34,7 +34,7 @@ export const StyledSection = styled.section`
   }
 
   .card {
-    width: min(90%, 310px);
+    width: min(100%, 310px);
     margin: 0 auto;
     text-align: center;
   }
@@ -51,7 +51,7 @@ export const StyledSection = styled.section`
     @media ${devices.desktop} {
       flex-direction: row;
       gap: 1.875rem;
-      width: min(90%, 1110px);
+      width: min(100%, 1110px);
       margin: 0 auto;
     }
 
@@ -62,13 +62,13 @@ export const StyledSection = styled.section`
         grid-template-columns: min-content 1fr;
         grid-template-rows: repeat(2, min-content);
         gap: 1.5rem 5rem;
-        width: min(90%, 600px);
+        width: min(100%, 600px);
         position: relative;
 
         @media ${devices.desktop} {
           display: flex;
           justify-content: center;
-          width: min(90%, 380px);
+          width: min(100%, 380px);
         }
 
         &::before {
@@ -100,7 +100,7 @@ export const StyledSection = styled.section`
     gap: 8rem;
 
     .features-card {
-      width: min(90%, 570px);
+      width: min(100%, 570px);
       align-items: center;
       gap: 2rem;
       position: relative;
@@ -108,7 +108,7 @@ export const StyledSection = styled.section`
       @media ${devices.tabletL} {
         flex-direction: row;
         justify-content: space-between;
-        width: min(95%, 1100px);
+        width: min(100%, 1100px);
       }
 
       &:nth-child(odd) {
@@ -255,7 +255,7 @@ export const StyledSection = styled.section`
       gap: 5.4rem;
 
       @media ${devices.tablet} {
-        width: min(90%, 490px);
+        width: min(100%, 490px);
       }
     }
 
@@ -274,5 +274,11 @@ export const StyledSection = styled.section`
         transform: translateX(-50%);
       }
     }
+  }
+
+  //Locations
+  &.section-city-undefined {
+    padding: 0 2rem;
+    text-align: center;
   }
 `;

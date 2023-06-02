@@ -16,7 +16,7 @@ const ThemeToggleButton = ({ onClick }) => {
       }}
     >
       <img
-        src={`${selectedTheme.name === 'light-theme' ? SunSVG : MoonSVG}`}
+        src={`${selectedTheme.name === 'light-theme' ? MoonSVG : SunSVG}`}
         alt="toggle theme"
         title="Toggle Theme"
       />

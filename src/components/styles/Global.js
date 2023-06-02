@@ -58,7 +58,7 @@ header, footer {
 }
 
 main {
-  padding-bottom: 7.5rem;
+  padding-bottom: 5.5rem;
 }
 
 ::selection {

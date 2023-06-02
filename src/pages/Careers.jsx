@@ -6,6 +6,7 @@ import {
   CareerFeatures,
   Container,
   ValuesSection,
+  FreePositions,
 } from '../components/ExportComponents';
 
 const Careers = () => {
@@ -23,6 +24,7 @@ const Careers = () => {
       <Header data={headerContent} sectionClass="section-features" />
       <CareerFeatures />
       <ValuesSection sectionTitle="Why join us?" />
+      <FreePositions />
     </Container>
   );
 };

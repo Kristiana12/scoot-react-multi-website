@@ -17,6 +17,7 @@ export const StyledFooterNavigation = styled.nav`
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
+  padding: 0 1.5rem;
 
   @media ${devices.tablet} {
     flex-direction: row;
