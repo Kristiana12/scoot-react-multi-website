@@ -9,6 +9,7 @@ export const StyledAppStore = styled.section`
   background-color: ${({ theme }) => theme.colors.navigationBackground};
   position: relative;
   z-index: 2;
+  max-width: 100%;
 `;
 
 export const StyledMainContainer = styled(Container)`

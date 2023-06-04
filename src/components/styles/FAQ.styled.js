@@ -8,7 +8,7 @@ export const StyledFAQSection = styled.section`
   color: ${({ theme }) => theme.colors.heading};
 
   @media ${devices.laptop} {
-    padding: 7.5rem 1.5rem 2.5rem;
+    padding: 7.5rem 0 2.5rem;
     gap: 4.5rem;
   }
 `;

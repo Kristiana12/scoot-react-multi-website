@@ -20,12 +20,14 @@ const Careers = () => {
   };
 
   return (
-    <Container>
+    <>
       <Header data={headerContent} sectionClass="section-features" />
-      <CareerFeatures />
-      <ValuesSection sectionTitle="Why join us?" />
-      <FreePositions />
-    </Container>
+      <Container>
+        <CareerFeatures />
+        <ValuesSection sectionTitle="Why join us?" />
+        <FreePositions />
+      </Container>
+    </>
   );
 };
 

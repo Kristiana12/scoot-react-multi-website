@@ -46,21 +46,18 @@ const HeaderIcon = ({ data }) => {
 
 const HeaderContent = ({ data }) => {
   return (
-    <>
-      <StyledContent className="content">
-        <StyledTitle>{data.title}</StyledTitle>
-        {data.paragraph && <p>{data.paragraph}</p>}
-        {data.button && (
-          <Button
-            to={data.urlLocation ? data.urlLocation : '#'}
-            className={data.buttonClass ? data.buttonClass : ''}
-          >
-            {data.button}
-          </Button>
-        )}
-      </StyledContent>
-      data
-    </>
+    <StyledContent className="content">
+      <StyledTitle>{data.title}</StyledTitle>
+      {data.paragraph && <p>{data.paragraph}</p>}
+      {data.button && (
+        <Button
+          to={data.urlLocation ? data.urlLocation : '#'}
+          className={data.buttonClass ? data.buttonClass : ''}
+        >
+          {data.button}
+        </Button>
+      )}
+    </StyledContent>
   );
 };
 
@@ -68,10 +65,7 @@ const Header = ({ data }) => {
   const location = useLocation();
   return (
     <StyledHeader className={location.pathname === '/' ? 'home' : 'page'}>
-      <HeaderContent
-        data={data}
-        $page={location.pathname === '/' ? 'home' : 'page'}
-      />
+      <HeaderContent data={data} />
       <HeaderImage data={data} />
       <HeaderIcon data={data} />
     </StyledHeader>

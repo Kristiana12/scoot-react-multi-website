@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import devices from './devices';
 
 const GlobalStyles = createGlobalStyle`
@@ -51,6 +51,14 @@ img {
 
 section {
   padding:7.5rem 2rem 0;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @media ${devices.desktop} {
+  padding:7.5rem 0 0;
+  }
+
+
 }
 
 header, footer {
@@ -59,6 +67,11 @@ header, footer {
 
 main {
   padding-bottom: 5.5rem;
+
+  @media ${devices.laptop} {
+  padding-bottom: 7.5rem;
+    
+  }
 }
 
 ::selection {

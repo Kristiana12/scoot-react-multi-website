@@ -48,7 +48,7 @@ const Home = () => {
       <Header data={content} />
       <Container>
         <Services />
-        <HomeFeatures />{' '}
+        <HomeFeatures />
       </Container>
     </>
   );

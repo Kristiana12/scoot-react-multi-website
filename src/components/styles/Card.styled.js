@@ -34,7 +34,7 @@ export const StyledSection = styled.section`
   }
 
   .card {
-    width: min(100%, 310px);
+    max-width: 310px;
     margin: 0 auto;
     text-align: center;
   }
@@ -51,7 +51,7 @@ export const StyledSection = styled.section`
     @media ${devices.desktop} {
       flex-direction: row;
       gap: 1.875rem;
-      width: min(100%, 1110px);
+      max-width: 1100px;
       margin: 0 auto;
     }
 
@@ -62,13 +62,13 @@ export const StyledSection = styled.section`
         grid-template-columns: min-content 1fr;
         grid-template-rows: repeat(2, min-content);
         gap: 1.5rem 5rem;
-        width: min(100%, 600px);
+        max-width: 600px;
         position: relative;
 
         @media ${devices.desktop} {
           display: flex;
           justify-content: center;
-          width: min(100%, 380px);
+          max-width: 380px;
         }
 
         &::before {
@@ -98,9 +98,10 @@ export const StyledSection = styled.section`
   //Features
   &.section-features {
     gap: 8rem;
+    max-width: 100%;
 
     .features-card {
-      width: min(100%, 570px);
+      max-width: 500px;
       align-items: center;
       gap: 2rem;
       position: relative;
@@ -108,7 +109,7 @@ export const StyledSection = styled.section`
       @media ${devices.tabletL} {
         flex-direction: row;
         justify-content: space-between;
-        width: min(100%, 1100px);
+        max-width: 1140px;
       }
 
       &:nth-child(odd) {
@@ -180,7 +181,7 @@ export const StyledSection = styled.section`
           display: block;
           position: absolute;
           top: 0;
-          right: -75%;
+          right: -89%;
           z-index: -1;
         }
 
@@ -238,6 +239,8 @@ export const StyledSection = styled.section`
 
   //Values
   &.section-values {
+    /* max-width: 1140px;
+    margin: 0 auto; */
     @media ${devices.laptop} {
       display: grid;
       grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -278,7 +281,46 @@ export const StyledSection = styled.section`
 
   //Locations
   &.section-city-undefined {
-    padding: 0 2rem;
+    padding: 3rem 1.5rem;
     text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+
+    @media ${devices.desktop} {
+      padding: 3rem 0;
+      max-width: 1140px;
+    }
+
+    .content {
+      align-items: center;
+
+      @media ${devices.desktop} {
+        flex-direction: row;
+        text-align: left;
+        align-items: start;
+        justify-content: space-between;
+        gap: 2.5rem;
+
+        p {
+          flex-basis: 495px;
+          justify-self: center;
+        }
+
+        a {
+          justify-self: end;
+          margin-left: auto;
+        }
+      }
+
+      h2 {
+        text-transform: capitalize;
+        @media ${devices.tablet} {
+          max-width: 450px;
+        }
+        @media ${devices.desktop} {
+          flex-basis: 350px;
+        }
+      }
+    }
   }
 `;

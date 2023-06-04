@@ -1,7 +1,10 @@
 import { styled } from 'styled-components';
 import devices from './devices';
 
-export const StyledPositionSection = styled.section``;
+export const StyledPositionSection = styled.section`
+  max-width: 1140px;
+  margin: 0 auto;
+`;
 export const StyledPositionList = styled.div`
   text-align: center;
 

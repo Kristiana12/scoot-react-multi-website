@@ -76,7 +76,7 @@ export const StyledHeader = styled.header`
       @media ${devices.desktop} {
         p,
         a {
-          margin-left: 5rem;
+          margin-left: 3.5rem;
         }
       }
     }
@@ -93,8 +93,8 @@ export const StyledHeader = styled.header`
       }
 
       @media ${devices.desktop} {
-        left: 52.5%;
-        bottom: 250px;
+        left: 49.5%;
+        bottom: 182px;
       }
     }
 

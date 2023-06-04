@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-import devices from '../styles/devices';
 
 const Container = ({ children, className }) => {
   const classes = className ? `container ${className}` : 'container';
@@ -7,9 +6,13 @@ const Container = ({ children, className }) => {
 };
 
 const StyledContainer = styled.div`
-  width: min(100%, 1440px);
+  max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
+
+  &.small {
+    max-width: 1140px;
+  }
 `;
 
 export default Container;
