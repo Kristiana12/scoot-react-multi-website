@@ -8,6 +8,10 @@ import {
   StyledTitle,
 } from '../styles/Header.styled';
 
+//Animations
+import { motion } from 'framer-motion';
+import { HeaderAnimation } from '../styles/animation';
+
 const HeaderImage = ({ data }) => {
   return (
     <>
@@ -46,9 +50,14 @@ const HeaderIcon = ({ data }) => {
 
 const HeaderContent = ({ data }) => {
   return (
-    <StyledContent className="content">
+    <StyledContent
+      className="content"
+      variants={HeaderAnimation}
+      initial="hidden"
+      animate="visible"
+    >
       <StyledTitle>{data.title}</StyledTitle>
-      {data.paragraph && <p>{data.paragraph}</p>}
+      {data.paragraph && <motion.p>{data.paragraph}</motion.p>}
       {data.button && (
         <Button
           to={data.urlLocation ? data.urlLocation : '#'}

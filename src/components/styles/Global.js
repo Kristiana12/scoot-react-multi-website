@@ -57,8 +57,6 @@ section {
   @media ${devices.desktop} {
   padding:7.5rem 0 0;
   }
-
-
 }
 
 header, footer {
@@ -70,7 +68,6 @@ main {
 
   @media ${devices.laptop} {
   padding-bottom: 7.5rem;
-    
   }
 }
 
@@ -78,6 +75,23 @@ main {
   color: ${({ theme }) => theme.colors.textContrast};
   background-color: ${({ theme }) => theme.colors.primary};
 }
+
+body::-webkit-scrollbar {
+  width: 3px;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color: ${({ theme }) => theme.colors.footer};
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: ${({ theme }) => theme.colors.primary};
+  height: 30px;
+}
+
+
+
+
 //Utility classes
 .section-title {
   text-align: center;

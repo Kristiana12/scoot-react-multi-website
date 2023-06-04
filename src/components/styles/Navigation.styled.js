@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import devices from './devices';
+import { motion } from 'framer-motion';
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled(motion.header)`
   padding: 1.375rem 1.5rem;
   display: flex;
   align-items: center;
@@ -75,5 +76,11 @@ export const StyledNavigation = styled.nav`
       flex-direction: row;
       margin: auto auto auto 3.5rem;
     }
+  }
+`;
+
+export const StyledMenuButton = styled.button`
+  @media ${devices.laptop} {
+    display: none;
   }
 `;

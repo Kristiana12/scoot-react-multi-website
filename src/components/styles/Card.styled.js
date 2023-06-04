@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import devices from '../styles/devices';
+import { motion } from 'framer-motion';
 
 export const StyledTitle = styled.h2`
   &.section-title-s {
@@ -17,7 +18,7 @@ export const StyledTitle = styled.h2`
   }
 `;
 
-export const StyledSection = styled.section`
+export const StyledSection = styled(motion.section)`
   //ALL
   display: flex;
   flex-direction: column;

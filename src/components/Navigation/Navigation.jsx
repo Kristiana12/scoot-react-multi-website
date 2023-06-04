@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { StyledNavigation, StyledHeader } from '../styles/Navigation.styled';
+import {
+  StyledNavigation,
+  StyledHeader,
+  StyledMenuButton,
+} from '../styles/Navigation.styled';
 import { ThemeToggleButton, Button } from '../ExportComponents';
 import Logo from '../../assets/logo.svg';
 import LogoDark from '../../assets/logo-dark.svg';
-import { styled } from 'styled-components';
-import devices from '../styles/devices';
 import useTheme from '../../hooks/useThemeHook';
 import useNavigation from '../../hooks/useNavigation';
+//animation
+import { NavigationAnimation } from '../styles/animation';
 
 const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -45,6 +49,7 @@ const Navigation = () => {
         setIsExpanded(false);
       }
     };
+
     document.addEventListener('click', handleOutsideClick);
 
     return () => {
@@ -53,7 +58,11 @@ const Navigation = () => {
   }, [isExpanded]);
 
   return (
-    <StyledHeader>
+    <StyledHeader
+      variants={NavigationAnimation}
+      initial="hidden"
+      animate="visible"
+    >
       <StyledMenuButton
         style={{
           background: `${
@@ -93,11 +102,5 @@ const Navigation = () => {
     </StyledHeader>
   );
 };
-
-const StyledMenuButton = styled.button`
-  @media ${devices.laptop} {
-    display: none;
-  }
-`;
 
 export default Navigation;

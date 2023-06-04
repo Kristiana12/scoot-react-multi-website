@@ -13,7 +13,7 @@ export const StyledAppStore = styled.section`
 `;
 
 export const StyledMainContainer = styled(Container)`
-  @media ${devices.desktop} {
+  @media ${devices.laptop} {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,8 +43,9 @@ export const StyledTitle = styled.h3`
   @media ${devices.tablet} {
     font-size: 3rem;
   }
-  @media ${devices.desktop} {
+  @media ${devices.laptop} {
     margin-left: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -60,6 +61,6 @@ export const StyledLink = styled(Link)`
 export const StyledImageContainer = styled.div`
   position: absolute;
   right: -200px;
-  bottom: 0;
+  bottom: -3px;
   z-index: -1;
 `;

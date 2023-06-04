@@ -1,5 +1,6 @@
-import { styled, css } from 'styled-components';
+import { styled } from 'styled-components';
 import devices from '../styles/devices';
+import { motion } from 'framer-motion';
 
 export const StyledHeader = styled.header`
   //ALL PAGES
@@ -94,7 +95,7 @@ export const StyledHeader = styled.header`
 
       @media ${devices.desktop} {
         left: 49.5%;
-        bottom: 182px;
+        bottom: 169px;
       }
     }
 
@@ -137,7 +138,7 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const StyledContent = styled.div`
+export const StyledContent = styled(motion.div)`
   width: min(95%, 320px);
   margin: 0 auto;
   text-align: center;
@@ -152,7 +153,7 @@ export const StyledContent = styled.div`
   }
 `;
 
-export const StyledTitle = styled.h1`
+export const StyledTitle = styled(motion.h1)`
   font-size: 2.5rem;
 
   @media ${devices.tablet} {
