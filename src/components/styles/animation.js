@@ -1,4 +1,13 @@
-import { easeInOut, easeOut } from 'framer-motion';
+import { easeOut } from 'framer-motion';
+
+export const PageTransition = {
+  hidden: { opacity: 0, y: 150 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
 
 export const NavigationAnimation = {
   hidden: { opacity: 0, y: -100 },
@@ -7,7 +16,7 @@ export const NavigationAnimation = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: easeOut,
     },
   },
 };
@@ -22,9 +31,7 @@ export const HeaderAnimation = {
     x: 0,
     transition: {
       duration: 1,
-      delay: 0.6,
-      ease: 'easeOut',
-      staggerChildren: 0.3,
+      delay: 0.4,
     },
   },
 };
