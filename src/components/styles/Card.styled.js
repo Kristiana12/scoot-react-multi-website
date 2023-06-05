@@ -239,7 +239,8 @@ export const StyledSection = styled(motion.section)`
   }
 
   //Values
-  &.section-values {
+  &.section-values,
+  &.section-products {
     /* max-width: 1140px;
     margin: 0 auto; */
     @media ${devices.laptop} {
@@ -255,11 +256,21 @@ export const StyledSection = styled(motion.section)`
       gap: 5rem 0;
     }
 
-    .values-card {
+    .values-card,
+    .product-card {
       gap: 5.4rem;
 
       @media ${devices.tablet} {
         width: min(100%, 490px);
+      }
+    }
+
+    .product-card {
+      .content {
+        align-items: center;
+      }
+      .image img {
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
       }
     }
 

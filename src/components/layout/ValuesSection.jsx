@@ -4,7 +4,7 @@ import OurCommunity from '../../assets/images/our-community.jpg';
 import OurIntegrity from '../../assets/images/our-integrity.jpg';
 import OurTech from '../../assets/images/our-tech.jpg';
 
-const Values = ({ sectionTitle }) => {
+const Values = ({ sectionTitle, sectionClass, data }) => {
   const { selectedTheme } = useTheme();
   const content = [
     {
@@ -118,8 +118,8 @@ const Values = ({ sectionTitle }) => {
   return (
     <Container>
       <Cards
-        dataArr={content}
-        sectionClass="section-values"
+        dataArr={data ? data : content}
+        sectionClass={sectionClass ? sectionClass : 'section-values'}
         sectionTitle={sectionTitle}
       />
     </Container>

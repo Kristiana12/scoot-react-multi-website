@@ -18,6 +18,7 @@ export { default as Services } from './Services/Services';
 export { default as HomeFeatures } from './Features/HomeFeatures';
 export { default as AboutFeatures } from './Features/AboutFeatures';
 export { default as CareerFeatures } from './Features/CareerFeatures';
+export { default as ProductsFeatures } from './Features/ProductsFeatures';
 
 //Components
 export { default as ResponsiveImages } from './ResponsiveImages';
