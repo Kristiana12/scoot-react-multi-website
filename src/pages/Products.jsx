@@ -1,5 +1,23 @@
+import ScootinImageDesktop from '../assets/images/scootin-desktop.jpg';
+import ScootinImageTablet from '../assets/images/scootin-tablet.jpg';
+import ScootinImageMobile from '../assets/images/scootin-mobile.jpg';
+import { Header } from '../components/ExportComponents';
+
 const Products = () => {
-  return <div className="products">Products</div>;
+  const headerContent = {
+    heroImages: {
+      mobile: ScootinImageMobile,
+      tablet: ScootinImageTablet,
+      desktop: ScootinImageDesktop,
+    },
+    title: 'Products',
+  };
+
+  return (
+    <>
+      <Header data={headerContent} />
+    </>
+  );
 };
 
 export default Products;

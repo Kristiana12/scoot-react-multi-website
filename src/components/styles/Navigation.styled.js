@@ -14,6 +14,10 @@ export const StyledHeader = styled(motion.header)`
     gap: 1.5rem;
   }
 
+  @media ${devices.desktop} {
+    padding: 1.375rem 0;
+  }
+
   button#menu-button {
     position: fixed;
     top: 0;
