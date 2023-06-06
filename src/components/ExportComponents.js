@@ -2,6 +2,7 @@
 export { default as Button } from './UI/Button';
 export { default as Container } from './UI/Container';
 export { default as Cards } from './UI/Cards';
+export { default as Input } from './UI/Input';
 
 //Navigation
 export { default as Navigation } from './Navigation/Navigation';
@@ -41,3 +42,5 @@ export { default as ProductsBookSection } from './layout/sections/Products/Produ
 
 //Contact
 export { default as ContactInfo } from './layout/sections/Contact/ContactInfo';
+export { default as ContactForm } from './layout/sections/Contact/ContactForm';
+export { default as ContactLocations } from './layout/sections/Contact/ContactLocations';

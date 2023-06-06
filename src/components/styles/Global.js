@@ -96,7 +96,30 @@ body::-webkit-scrollbar-thumb {
   height: 30px;
 }
 
+label {
+    color: ${({ theme }) => theme.colors.heading};
+    font-weight: 600;
+    font-size: 1rem;
+  }
 
+textarea {
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  background-color: transparent;
+}
+
+input {
+    font-family: inherit;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
+    padding: 0.6rem 0.2rem;
+    font-size: 1rem;
+  }
+
+input:focus {
+    outline: none;
+}
 
 
 //Utility classes
@@ -112,7 +135,6 @@ body::-webkit-scrollbar-thumb {
 .title-s {
   font-size: 1.125rem;
 
-
   @media ${devices.tablet} {
       font-size: 1.5rem;
 
@@ -122,33 +144,30 @@ body::-webkit-scrollbar-thumb {
 .title-m {
   font-size: 1.5rem;
 
-
   @media ${devices.tablet} {
       font-size: 2.5rem;
 
     }
 }
 
-@keyframes showFAQ {
-  0%{
-    transform: translateY(-10px);
-  }
-    20% {
-      height: auto;
-      margin-top: 1.5rem;
-    }
+.btn-secondary {
+  padding: 0.5rem 3rem;
+  border-radius: 30px;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.textContrast};
+  border: 2px solid transparent;
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
 
-    50% {
-      cursor: auto;
-  visibility: visible;
-  transform: translateY(-4px);
-    }
-    100% {
-      opacity: 1;
-    transform: translateY(0px);
-
-    }
+    &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.textContrast};
+    border: 2px solid ${({ theme }) => theme.colors.primary};
   }
+}
+
+.background-color {
+  background-color: ${({ theme }) => theme.colors.backgroundOpacity};
+}
 
 `;
 
