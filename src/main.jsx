@@ -8,7 +8,8 @@ import {
   Careers,
   Products,
   ErrorPage,
-} from './pages/ExportPagesComponents.jsx';
+  Contact,
+} from './pages/ExportPagesComponents.js';
 import AppThemeProvider from './context/theme-context.jsx';
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
     ],
   },

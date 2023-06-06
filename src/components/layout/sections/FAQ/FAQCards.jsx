@@ -1,10 +1,10 @@
-import useTheme from '../../hooks/useThemeHook';
+import useTheme from '../../../../hooks/useThemeHook';
 import {
   StyledQuestion,
   StyledAnswer,
   StyledFAQCard,
   StyledFAQ,
-} from '../styles/FAQ.styled';
+} from '../../../styles/FAQ.styled';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 

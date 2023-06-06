@@ -1,9 +1,9 @@
 // import useReusableCards from '../../hooks/useReusableCards';
-import Payments from '../../assets/images/payments.jpg';
-import NearYou from '../../assets/images/near-you.jpg';
-import Telemetry from '../../assets/images/telemetry.jpg';
-import useTheme from '../../hooks/useThemeHook';
-import { Cards } from '../ExportComponents';
+import Payments from '../../../../assets/images/payments.jpg';
+import NearYou from '../../../../assets/images/near-you.jpg';
+import Telemetry from '../../../../assets/images/telemetry.jpg';
+import useTheme from '../../../../hooks/useThemeHook';
+import { Cards } from '../../../ExportComponents';
 
 const HomeFeatures = () => {
   const { selectedTheme } = useTheme();

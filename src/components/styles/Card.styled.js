@@ -47,6 +47,22 @@ export const StyledSection = styled(motion.section)`
     gap: 1.5rem;
   }
 
+  //Contact
+  &.section-contact {
+    @media ${devices.laptop} {
+      flex-direction: row;
+      gap: 1.875rem;
+    }
+
+    .content span {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
   //Services
   &.section-services {
     @media ${devices.desktop} {
@@ -130,11 +146,16 @@ export const StyledSection = styled(motion.section)`
       }
 
       .image {
-        width: 310px;
-        height: 310px;
+        width: 290px;
+        height: 290px;
         border-radius: 50%;
         overflow: hidden;
         margin-bottom: 1.5rem;
+
+        @media ${devices.mobile} {
+          width: 310px;
+          height: 310px;
+        }
 
         @media ${devices.tablet} {
           width: 445px;
@@ -215,7 +236,7 @@ export const StyledSection = styled(motion.section)`
         }
 
         @media ${devices.tabletL} {
-          right: 1140px;
+          right: 1180px;
         }
       }
     }
@@ -238,11 +259,12 @@ export const StyledSection = styled(motion.section)`
     }
   }
 
-  //Values
+  //Values - Products
   &.section-values,
   &.section-products {
-    /* max-width: 1140px;
-    margin: 0 auto; */
+    padding: 7.5rem 0.5rem 0;
+    gap: 5rem;
+
     @media ${devices.laptop} {
       display: grid;
       grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -258,7 +280,7 @@ export const StyledSection = styled(motion.section)`
 
     .values-card,
     .product-card {
-      gap: 5.4rem;
+      gap: 4rem;
 
       @media ${devices.tablet} {
         width: min(100%, 490px);
@@ -291,12 +313,17 @@ export const StyledSection = styled(motion.section)`
     }
   }
 
-  //Locations
-  &.section-city-undefined {
+  //Locations - Booking
+  &.section-city-undefined,
+  &.section-booking {
     padding: 3rem 1.5rem;
     text-align: center;
     max-width: 680px;
     margin: 0 auto;
+
+    &.section-booking {
+      padding: 8.5rem 1.5rem 0;
+    }
 
     @media ${devices.desktop} {
       padding: 3rem 0;

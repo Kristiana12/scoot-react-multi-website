@@ -1,9 +1,9 @@
-import { Button } from '../ExportComponents';
+import { Button } from '../../../ExportComponents';
 import { v4 as uuidv4 } from 'uuid';
 import {
   StyledPositionList,
   StyledPositionCard,
-} from '../styles/Positions.styled';
+} from '../../../styles/Positions.styled';
 
 const PositionCard = ({ data }) => {
   return (

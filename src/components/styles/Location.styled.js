@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import devices from './devices';
 
 export const StyledLocationSection = styled.section`
-  padding: 4.5rem 2rem 0;
+  padding: 4.5rem 1rem 0;
 
   @media ${devices.tablet} {
     .location-map {

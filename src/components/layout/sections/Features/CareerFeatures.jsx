@@ -1,12 +1,13 @@
-import { Cards } from '../ExportComponents';
-import DiscoverImage from '../../assets/images/discover.jpg';
-import useTheme from '../../hooks/useThemeHook';
+import { Cards } from '../../../ExportComponents';
+import JoinUs from '../../../../assets/images/join-us.jpg';
+import useTheme from '../../../../hooks/useThemeHook';
 
-const ProductsFeatures = () => {
+const CareerFeatures = () => {
   const { selectedTheme } = useTheme();
+
   const features = [
     {
-      image: DiscoverImage,
+      image: JoinUs,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g
@@ -33,12 +34,13 @@ const ProductsFeatures = () => {
           />
         </svg>
       ),
-      title: 'Start discovering today',
+      title: 'Care to join our mission?',
       titleClass: 'section-title-l',
       paragraph:
-        'Unleash your inner adventurer and experience the city in a whole new way with our scooter rentals. Say goodbye to crowded buses and expensive taxi rides!',
-      button: 'Book now',
+        'We’re always looking for ambitious individuals to help us on our journey. If you’re passionate about our mission to provide clean, accessible transport to improve urban living we want to hear from you!',
+      button: 'Say Hello',
       buttonClass: 'btn-primary',
+      urlLocation: '/locations',
       className: 'features-card card',
     },
   ];
@@ -46,4 +48,4 @@ const ProductsFeatures = () => {
   return <Cards dataArr={features} sectionClass="section-features" />;
 };
 
-export default ProductsFeatures;
+export default CareerFeatures;

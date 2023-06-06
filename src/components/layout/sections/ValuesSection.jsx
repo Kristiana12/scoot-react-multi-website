@@ -1,10 +1,10 @@
-import { Cards, Container } from '../ExportComponents';
-import useTheme from '../../hooks/useThemeHook';
-import OurCommunity from '../../assets/images/our-community.jpg';
-import OurIntegrity from '../../assets/images/our-integrity.jpg';
-import OurTech from '../../assets/images/our-tech.jpg';
+import { Cards, Container } from '../../ExportComponents';
+import useTheme from '../../../hooks/useThemeHook';
+import OurCommunity from '../../../assets/images/our-community.jpg';
+import OurIntegrity from '../../../assets/images/our-integrity.jpg';
+import OurTech from '../../../assets/images/our-tech.jpg';
 
-const Values = ({ sectionTitle, sectionClass, data }) => {
+const Values = ({ sectionTitle }) => {
   const { selectedTheme } = useTheme();
   const content = [
     {
@@ -118,8 +118,8 @@ const Values = ({ sectionTitle, sectionClass, data }) => {
   return (
     <Container>
       <Cards
-        dataArr={data ? data : content}
-        sectionClass={sectionClass ? sectionClass : 'section-values'}
+        dataArr={content}
+        sectionClass="section-values"
         sectionTitle={sectionTitle}
       />
     </Container>

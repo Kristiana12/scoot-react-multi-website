@@ -1,5 +1,5 @@
-import useTheme from '../../hooks/useThemeHook';
-import { Cards } from '../ExportComponents';
+import useTheme from '../../../../hooks/useThemeHook';
+import { Cards } from '../../../ExportComponents';
 
 const Services = () => {
   const { selectedTheme } = useTheme();

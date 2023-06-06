@@ -11,26 +11,33 @@ export { default as ThemeToggleButton } from './Navigation/ThemeToggleButton';
 export { default as Footer } from './layout/Footer';
 export { default as AppStore } from './layout/AppStore';
 export { default as Header } from './layout/Header';
-export { default as ValuesSection } from './layout/ValuesSection';
+export { default as ValuesSection } from './layout/sections/ValuesSection';
 
 //Services - Features
-export { default as Services } from './Services/Services';
-export { default as HomeFeatures } from './Features/HomeFeatures';
-export { default as AboutFeatures } from './Features/AboutFeatures';
-export { default as CareerFeatures } from './Features/CareerFeatures';
-export { default as ProductsFeatures } from './Features/ProductsFeatures';
+export { default as Services } from './layout/sections/Services/Services';
+export { default as HomeFeatures } from './layout/sections/Features/HomeFeatures';
+export { default as AboutFeatures } from './layout/sections/Features/AboutFeatures';
+export { default as CareerFeatures } from './layout/sections/Features/CareerFeatures';
+export { default as ProductsFeatures } from './layout/sections/Features/ProductsFeatures';
 
 //Components
 export { default as ResponsiveImages } from './ResponsiveImages';
 
 //FAQ
-export { default as FaqCards } from './FAQ/FAQCards';
-export { default as Faq } from './FAQ/FAQ';
+export { default as FaqCards } from './layout/sections/FAQ/FAQCards';
+export { default as Faq } from './layout/sections/FAQ/FAQ';
 
 //Positions
-export { default as PositionCards } from './Positions/PositionCards';
-export { default as FreePositions } from './Positions/FreePositions';
+export { default as PositionCards } from './layout/sections/Positions/PositionCards';
+export { default as FreePositions } from './layout/sections/Positions/FreePositions';
 
 //Location
-export { default as LocationsSection } from './Location/LocationsSection';
-export { default as LocationMap } from './Location/LocationMap';
+export { default as LocationsSection } from './layout/sections/Location/LocationsSection';
+export { default as LocationMap } from './layout/sections/Location/LocationMap';
+
+//Products
+export { default as ProductsPreview } from './layout/sections/Products/ProductsPreview';
+export { default as ProductsBookSection } from './layout/sections/Products/ProductsBookSection';
+
+//Contact
+export { default as ContactInfo } from './layout/sections/Contact/ContactInfo';

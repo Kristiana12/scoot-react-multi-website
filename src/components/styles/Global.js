@@ -51,9 +51,15 @@ img {
 }
 
 section {
-  padding:7.5rem 2rem 0;
+
+  padding: 7.5rem 0.5rem 0;
   max-width: 1140px;
   margin: 0 auto;
+
+  @media ${devices.tablet} {
+    padding:7.5rem 2rem 0;
+
+  }
 
   @media ${devices.desktop} {
   padding:7.5rem 0 0;

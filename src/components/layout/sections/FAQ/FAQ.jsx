@@ -1,5 +1,5 @@
-import { FaqCards, Container } from '../ExportComponents';
-import { StyledFAQSection } from '../styles/FAQ.styled';
+import { FaqCards, Container } from '../../../ExportComponents';
+import { StyledFAQSection } from '../../../styles/FAQ.styled';
 import { v4 as uuidv4 } from 'uuid';
 
 const FAQ = () => {

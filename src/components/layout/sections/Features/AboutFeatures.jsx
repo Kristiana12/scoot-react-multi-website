@@ -1,7 +1,7 @@
-import useTheme from '../../hooks/useThemeHook';
-import BetterLiving from '../../assets/images/better-living.jpg';
-import DigitalEra from '../../assets/images/digital-era.jpg';
-import { Cards } from '../ExportComponents';
+import useTheme from '../../../../hooks/useThemeHook';
+import BetterLiving from '../../../../assets/images/better-living.jpg';
+import DigitalEra from '../../../../assets/images/digital-era.jpg';
+import { Cards } from '../../../ExportComponents';
 
 const AboutFeatures = () => {
   const { selectedTheme } = useTheme();

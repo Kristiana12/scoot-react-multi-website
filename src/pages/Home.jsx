@@ -41,8 +41,6 @@ const Home = () => {
     urlLocation: '/products',
   };
 
-  // const heroSection = useHeroSection(content);
-
   return (
     <>
       <Header data={content} />

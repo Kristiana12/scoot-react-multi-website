@@ -1,5 +1,5 @@
-import { PositionCards } from '../ExportComponents';
-import { StyledPositionSection } from '../styles/Positions.styled';
+import { PositionCards } from '../../../ExportComponents';
+import { StyledPositionSection } from '../../../styles/Positions.styled';
 
 const FreePositions = () => {
   const positions = [
