@@ -169,6 +169,17 @@ input:focus {
   background-color: ${({ theme }) => theme.colors.backgroundOpacity};
 }
 
+.error-message {
+  color: crimson;
+  font-size: 13px;
+}
+
+.success-message {
+  color: ${({ theme }) => theme.colors.heading};
+  padding: 5rem 1.5rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
 `;
 
 export default GlobalStyles;

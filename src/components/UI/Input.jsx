@@ -1,12 +1,12 @@
-import { StyledInputField } from '../styles/Form.styled';
+import { forwardRef } from 'react';
 
-const Input = ({ label, id, inputType }) => {
+const Input = forwardRef(({ label, id, inputType }, ref) => {
   return (
-    <StyledInputField>
+    <>
       <label htmlFor={id}>{label}</label>
-      <input id={id} type={inputType} />
-    </StyledInputField>
+      <input id={id} type={inputType} ref={ref} />
+    </>
   );
-};
+});
 
 export default Input;

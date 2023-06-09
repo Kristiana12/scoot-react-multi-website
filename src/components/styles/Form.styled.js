@@ -22,7 +22,7 @@ export const StyledContactSection = styled.section`
 `;
 
 export const StyledForm = styled.form`
-  padding: 3rem 0.5rem 2rem;
+  padding: 3rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -30,12 +30,18 @@ export const StyledForm = styled.form`
   max-width: 1140px;
   margin: 0 auto;
 
+  > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   @media ${devices.tablet} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 1.5rem;
 
-    textarea {
+    > div:nth-child(3) {
       grid-column: 1 / -1;
     }
 
@@ -44,12 +50,16 @@ export const StyledForm = styled.form`
       justify-self: end;
     }
   }
+
+  @media ${devices.desktop} {
+    padding: 3rem 0 2rem;
+  }
 `;
 
 export const StyledInputField = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.25rem;
 `;
 
 export const StyledContactLocations = styled(StyledContactSection)`
