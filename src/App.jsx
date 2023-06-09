@@ -29,7 +29,7 @@ function App() {
           {location.pathname === '/' ? <Home /> : <Outlet />}
         </motion.main>
       </AnimatePresence>
-      <Footer />
+      {location.key === 'default' ? null : <Footer />}
     </ThemeProvider>
   );
 }

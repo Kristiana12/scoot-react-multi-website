@@ -73,9 +73,6 @@ header, footer {
 main {
   padding-bottom: 5.5rem;
 
-  @media ${devices.laptop} {
-  padding-bottom: 7.5rem;
-  }
 }
 
 ::selection {
