@@ -11,6 +11,7 @@ const FAQ = () => {
       isExpanded: true,
       class: 'show',
       id: uuidv4(),
+      active: true,
     },
     {
       question: 'Can I find a nearby Scoots?',
@@ -19,6 +20,7 @@ const FAQ = () => {
       isExpanded: false,
       class: '',
       id: uuidv4(),
+      active: false,
     },
     {
       question: 'Do I need a license to ride?',
@@ -27,6 +29,7 @@ const FAQ = () => {
       isExpanded: false,
       class: '',
       id: uuidv4(),
+      active: false,
     },
   ];
 
@@ -38,6 +41,7 @@ const FAQ = () => {
       isExpanded: true,
       class: 'show',
       id: uuidv4(),
+      active: true,
     },
     {
       question: 'How about the rules & regulations?',
@@ -46,6 +50,7 @@ const FAQ = () => {
       isExpanded: false,
       class: '',
       id: uuidv4(),
+      active: false,
     },
     {
       question: 'What if I damage my Scoot?',
@@ -54,6 +59,7 @@ const FAQ = () => {
       isExpanded: false,
       class: '',
       id: uuidv4(),
+      active: false,
     },
   ];
 

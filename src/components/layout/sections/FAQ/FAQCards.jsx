@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import useTheme from '../../../../hooks/useThemeHook';
 import {
   StyledQuestion,
@@ -6,20 +7,30 @@ import {
   StyledFAQ,
 } from '../../../styles/FAQ.styled';
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from 'react';
+import { FaqToggle } from '../../../styles/animation';
+import { LayoutGroup, motion, AnimatePresence } from 'framer-motion';
 
 const FAQCard = ({ data }) => {
   const { selectedTheme } = useTheme();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isActive, setIsActive] = useState(data.active);
 
-  const expandCardHandler = () => {};
+  const clickHandler = () => {
+    setIsActive(() => !isActive);
+  };
 
   return (
-    <StyledFAQCard className={`faq-card ${data.isExpanded ? 'show' : ''}`}>
-      <StyledQuestion className="faq-question" aria-expanded={data.isExpanded}>
-        <h5 className="title-s">{data.question}</h5>
-        <div className="faq-chevron" onClick={expandCardHandler}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+    <StyledFAQCard layout>
+      <StyledQuestion aria-expanded={isActive}>
+        <motion.h5 layout className="title-s">
+          {data.question}
+        </motion.h5>
+        <motion.div layout className="faq-chevron" onClick={clickHandler}>
+          <svg
+            className={isActive ? 'rotation' : ''}
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="12"
+          >
             <path
               fill="none"
               style={{ stroke: `${selectedTheme.colors.primary}` }}
@@ -27,11 +38,13 @@ const FAQCard = ({ data }) => {
               d="M1 1l8 8 8-8"
             />
           </svg>
-        </div>
+        </motion.div>
       </StyledQuestion>
-      <StyledAnswer className="faq-answer">
-        <p>{data.answer}</p>
-      </StyledAnswer>
+      {isActive && (
+        <StyledAnswer layout variants={FaqToggle}>
+          <p>{data.answer}</p>
+        </StyledAnswer>
+      )}
     </StyledFAQCard>
   );
 };
@@ -40,10 +53,11 @@ const FAQCards = ({ data, title }) => {
   return (
     <StyledFAQ className="faq">
       <h4 className="title-m">{title}</h4>
-
-      {data.map((data) => (
-        <FAQCard data={data} key={uuidv4()} />
-      ))}
+      <LayoutGroup>
+        {data.map((data) => (
+          <FAQCard data={data} key={uuidv4()} />
+        ))}
+      </LayoutGroup>
     </StyledFAQ>
   );
 };

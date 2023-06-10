@@ -36,11 +36,15 @@ export const HeaderAnimation = {
   },
 };
 
-export const SectionAnimation = {
-  hidden: { opacity: 0, y: 50 },
+export const FaqToggle = {
+  hidden: {
+    y: 50,
+    opacity: 0,
+    transition: { duration: 0.6 },
+  },
   visible: {
-    opacity: 1,
     y: 0,
-    transition: { duration: 2, ease: 'easeInOut' },
+    opacity: 1,
+    transition: { duration: 0.6 },
   },
 };

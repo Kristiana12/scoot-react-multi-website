@@ -5,7 +5,7 @@ import { useLocation, Outlet } from 'react-router-dom';
 import useTheme from './hooks/useThemeHook';
 import Home from './pages/Home';
 import ScrollToTop from './components/styles/ScrollToTop';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { PageTransition } from './components/styles/animation';
 
 function App() {
@@ -19,17 +19,22 @@ function App() {
       <Container className="small">
         <Navigation />
       </Container>
-      <AnimatePresence mode="wait">
-        <motion.main
-          key={location.pathname}
-          variants={PageTransition}
-          initial="hidden"
-          animate="visible"
-        >
-          {location.pathname === '/' ? <Home /> : <Outlet />}
-        </motion.main>
-      </AnimatePresence>
-      {location.key === 'default' ? null : <Footer />}
+      <motion.main
+        className={
+          location.key === 'default' && location.pathname !== '/'
+            ? 'error-page'
+            : null
+        }
+        key={location.pathname}
+        variants={PageTransition}
+        initial="hidden"
+        animate="visible"
+      >
+        {location.pathname === '/' ? <Home /> : <Outlet />}
+      </motion.main>
+      {location.key === 'default' && location.pathname !== '/' ? null : (
+        <Footer />
+      )}
     </ThemeProvider>
   );
 }

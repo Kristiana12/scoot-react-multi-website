@@ -1,6 +1,6 @@
 import { Input } from '../../../ExportComponents';
 import { StyledForm, StyledInputField } from '../../../styles/Form.styled';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 const isEmail = (email) =>
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -57,8 +57,6 @@ const ContactForm = () => {
       setshowSuccesMessage(true);
     }
   };
-
-  console.log(textareaError);
 
   return (
     <>

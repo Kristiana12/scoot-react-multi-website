@@ -51,7 +51,6 @@ img {
 }
 
 section {
-
   padding: 7.5rem 0.5rem 0;
   max-width: 1140px;
   margin: 0 auto;
@@ -72,6 +71,13 @@ header, footer {
 
 main {
   padding-bottom: 5.5rem;
+  min-height: calc(100vh - 96px);
+
+  &.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 }
 

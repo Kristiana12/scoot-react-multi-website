@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import devices from '../styles/devices';
+import { motion } from 'framer-motion';
 
 export const StyledFAQSection = styled.section`
   display: flex;
@@ -16,7 +17,7 @@ export const StyledFAQSection = styled.section`
     padding: 7.5rem 0 2.5rem;
   }
 `;
-export const StyledFAQ = styled.div`
+export const StyledFAQ = styled(motion.div)`
   @media ${devices.laptop} {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -34,15 +35,16 @@ export const StyledFAQ = styled.div`
   }
 `;
 
-export const StyledFAQCard = styled.div`
+export const StyledFAQCard = styled(motion.div)`
   background-color: ${({ theme }) => theme.colors.background2};
   padding: 2rem;
+  overflow: hidden;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
 `;
 
-export const StyledQuestion = styled.div`
+export const StyledQuestion = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,8 +53,16 @@ export const StyledQuestion = styled.div`
   .faq-chevron {
     cursor: pointer;
   }
+
+  svg {
+    transition: transform 0.3s;
+  }
+
+  svg.rotation {
+    transform: rotate(180deg);
+  }
 `;
 
-export const StyledAnswer = styled.div`
+export const StyledAnswer = styled(motion(motion.div))`
   margin-top: 1.5rem;
 `;

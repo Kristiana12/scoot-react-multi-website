@@ -3,7 +3,7 @@ import devices from './devices';
 
 export const StyledMain = styled.div`
   padding: 2rem 0 0;
-  min-height: 100vh;
+  flex: 1;
 
   .container {
     @media ${devices.laptop} {
