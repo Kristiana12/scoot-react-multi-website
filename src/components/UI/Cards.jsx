@@ -1,6 +1,8 @@
 import Button from './Button';
 import { v4 as uuidv4 } from 'uuid';
 import { StyledTitle, StyledSection } from '../styles/Card.styled';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const Card = ({ data }) => {
   return (
@@ -24,10 +26,21 @@ const Card = ({ data }) => {
 };
 
 const Cards = ({ dataArr, sectionClass, sectionTitle }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const cards = dataArr.map((data) => <Card key={uuidv4()} data={data} />);
 
   return (
-    <StyledSection className={sectionClass}>
+    <StyledSection
+      className={sectionClass}
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateY(100px)',
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+      }}
+    >
       {sectionTitle && <h3 className="section-title">{sectionTitle}</h3>}
       {cards}
     </StyledSection>

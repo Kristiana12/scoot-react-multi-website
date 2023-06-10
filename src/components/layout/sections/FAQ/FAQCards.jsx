@@ -41,7 +41,12 @@ const FAQCard = ({ data }) => {
         </motion.div>
       </StyledQuestion>
       {isActive && (
-        <StyledAnswer layout variants={FaqToggle}>
+        <StyledAnswer
+          layout
+          variants={FaqToggle}
+          initial="hidden"
+          animate="visible"
+        >
           <p>{data.answer}</p>
         </StyledAnswer>
       )}
