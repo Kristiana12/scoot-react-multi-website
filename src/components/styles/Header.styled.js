@@ -94,7 +94,7 @@ export const StyledHeader = styled.header`
       }
 
       @media ${devices.desktop} {
-        left: 49.5%;
+        left: calc(10vw + 620px);
         bottom: 169px;
       }
     }

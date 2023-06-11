@@ -37,6 +37,16 @@ const Home = () => {
         </g>
       </svg>
     ),
+    icon2: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="203" height="15">
+        <path
+          fill="none"
+          style={{ stroke: `${selectedTheme.colors.primary}` }}
+          strokeWidth="15"
+          d="M203 7.5H.5"
+        />
+      </svg>
+    ),
     className: 'home-hero',
     urlLocation: '/products',
   };

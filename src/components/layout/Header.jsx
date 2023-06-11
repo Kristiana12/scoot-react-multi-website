@@ -32,18 +32,7 @@ const HeaderIcon = ({ data }) => {
       <div className="icon-circles">
         <img src={IconCircles} alt="" arina-hidden="true" />
       </div>
-      {location.pathname === '/' && (
-        <div className="icon-line">
-          <svg xmlns="http://www.w3.org/2000/svg" width="203" height="15">
-            <path
-              fill="none"
-              style={{ stroke: `${selectedTheme.colors.primary}` }}
-              strokeWidth="15"
-              d="M203 7.5H.5"
-            />
-          </svg>
-        </div>
-      )}
+      {data.icon2 && <div className="icon-line">{data.icon2}</div>}
     </>
   );
 };
@@ -71,6 +60,7 @@ const HeaderContent = ({ data }) => {
 };
 
 const Header = ({ data }) => {
+  console.log(data);
   const location = useLocation();
   return (
     <StyledHeader className={location.pathname === '/' ? 'home' : 'page'}>
