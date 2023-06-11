@@ -27,7 +27,6 @@ function App() {
         animate="visible"
       >
         {location.pathname === '/' ? <Home /> : <Outlet />}
-        {console.log(location.pathname)}
       </motion.main>
       {location.pathname === '/404' ? null : <Footer />}
     </ThemeProvider>
