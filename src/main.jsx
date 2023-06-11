@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from 'react-router-dom';
 import {
   About,
   Location,
@@ -40,8 +44,12 @@ const router = createBrowserRouter(
           element: <Contact />,
         },
         {
-          path: '*',
+          path: '/404',
           element: <ErrorPage />,
+        },
+        {
+          path: '*',
+          element: <Navigate replace to="/404" />,
         },
       ],
     },
