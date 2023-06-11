@@ -3,8 +3,7 @@ import {
   StyledLocationsList,
 } from '../../../styles/Form.styled';
 import { v4 as uuidv4 } from 'uuid';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { SectionInView } from '../../../ExportComponents';
 
 const ContactLocations = () => {
   const locations = [
@@ -30,18 +29,8 @@ const ContactLocations = () => {
     },
   ];
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
-    <StyledContactLocations
-      ref={ref}
-      style={{
-        transform: isInView ? 'none' : 'translateY(100px)',
-        opacity: isInView ? 1 : 0,
-        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-      }}
-    >
+    <SectionInView StyledSection={StyledContactLocations}>
       <h3 className="title-m">Our Locations</h3>
       <p className="paragraph">
         We work globally and have offices in New York, London, Jakarta and
@@ -56,7 +45,7 @@ const ContactLocations = () => {
           </div>
         ))}
       </StyledLocationsList>
-    </StyledContactLocations>
+    </SectionInView>
   );
 };
 

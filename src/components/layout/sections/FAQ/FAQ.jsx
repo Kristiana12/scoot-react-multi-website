@@ -1,8 +1,6 @@
-import { FaqCards, Container } from '../../../ExportComponents';
+import { FaqCards, Container, SectionInView } from '../../../ExportComponents';
 import { StyledFAQSection } from '../../../styles/FAQ.styled';
 import { v4 as uuidv4 } from 'uuid';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
 
 const FAQ = () => {
   const instructions = [
@@ -65,24 +63,13 @@ const FAQ = () => {
     },
   ];
 
-  const ref = useRef();
-  const isInView = useInView(ref, { once: true });
-
   return (
     <Container>
-      <StyledFAQSection
-        className="section-faq"
-        ref={ref}
-        style={{
-          transform: isInView ? 'none' : 'translateY(100px)',
-          opacity: isInView ? 1 : 0,
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-        }}
-      >
+      <SectionInView StyledSection={StyledFAQSection} className="section-faq">
         <h3 className="section-title">FAQs</h3>
         <FaqCards data={instructions} title="How it works" />
         <FaqCards data={safety} title="Safe driving" />
-      </StyledFAQSection>
+      </SectionInView>
     </Container>
   );
 };

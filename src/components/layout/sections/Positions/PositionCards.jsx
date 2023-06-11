@@ -4,8 +4,6 @@ import {
   StyledPositionList,
   StyledPositionCard,
 } from '../../../styles/Positions.styled';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
 
 const PositionCard = ({ data }) => {
   return (
@@ -22,18 +20,8 @@ const PositionCard = ({ data }) => {
 };
 
 const PositionCards = ({ data }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
-    <StyledPositionList
-      ref={ref}
-      style={{
-        transform: isInView ? 'none' : 'translateY(100px)',
-        opacity: isInView ? 1 : 0,
-        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-      }}
-    >
+    <StyledPositionList>
       {data.map((data) => (
         <PositionCard key={uuidv4()} data={data} />
       ))}

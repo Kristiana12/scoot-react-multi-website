@@ -1,4 +1,4 @@
-import { PositionCards } from '../../../ExportComponents';
+import { PositionCards, SectionInView } from '../../../ExportComponents';
 import { StyledPositionSection } from '../../../styles/Positions.styled';
 
 const FreePositions = () => {
@@ -30,9 +30,9 @@ const FreePositions = () => {
   ];
 
   return (
-    <StyledPositionSection>
+    <SectionInView StyledSection={StyledPositionSection}>
       <PositionCards data={positions} />
-    </StyledPositionSection>
+    </SectionInView>
   );
 };
 

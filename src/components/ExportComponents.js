@@ -8,6 +8,9 @@ export { default as Input } from './UI/Input';
 export { default as Navigation } from './Navigation/Navigation';
 export { default as ThemeToggleButton } from './Navigation/ThemeToggleButton';
 
+//Section in View Animation Component
+export { default as SectionInView } from './layout/sections/SectionInView';
+
 //Layouts
 export { default as Footer } from './layout/Footer';
 export { default as AppStore } from './layout/AppStore';

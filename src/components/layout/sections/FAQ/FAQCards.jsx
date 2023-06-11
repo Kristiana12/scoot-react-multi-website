@@ -8,7 +8,7 @@ import {
 } from '../../../styles/FAQ.styled';
 import { v4 as uuidv4 } from 'uuid';
 import { FaqToggle } from '../../../styles/animation';
-import { LayoutGroup, motion, AnimatePresence } from 'framer-motion';
+import { LayoutGroup, motion } from 'framer-motion';
 
 const FAQCard = ({ data }) => {
   const { selectedTheme } = useTheme();
