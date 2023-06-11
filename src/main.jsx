@@ -12,39 +12,42 @@ import {
 } from './pages/ExportPagesComponents.js';
 import AppThemeProvider from './context/theme-context.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    // errorElement: <ErrorPage />,
-    children: [
-      {
-        path: '/about',
-        element: <About />,
-      },
-      {
-        path: '/locations',
-        element: <Location />,
-      },
-      {
-        path: '/careers',
-        element: <Careers />,
-      },
-      {
-        path: '/products',
-        element: <Products />,
-      },
-      {
-        path: '/contact',
-        element: <Contact />,
-      },
-      {
-        path: '*',
-        element: <ErrorPage />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      // errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/about',
+          element: <About />,
+        },
+        {
+          path: '/locations',
+          element: <Location />,
+        },
+        {
+          path: '/careers',
+          element: <Careers />,
+        },
+        {
+          path: '/products',
+          element: <Products />,
+        },
+        {
+          path: '/contact',
+          element: <Contact />,
+        },
+        {
+          path: '*',
+          element: <ErrorPage />,
+        },
+      ],
+    },
+  ],
+  { basename: import.meta.env.DEV ? '/' : '/scoot-react-multi-website/' }
+);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
