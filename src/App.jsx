@@ -20,21 +20,16 @@ function App() {
         <Navigation />
       </Container>
       <motion.main
-        className={
-          location.key === 'default' && location.pathname === '/404'
-            ? 'error-page'
-            : null
-        }
+        className={location.pathname === '/404' ? 'error-page' : null}
         key={location.pathname}
         variants={PageTransition}
         initial="hidden"
         animate="visible"
       >
         {location.pathname === '/' ? <Home /> : <Outlet />}
+        {console.log(location.pathname)}
       </motion.main>
-      {location.key === 'default' && location.pathname === '/404' ? null : (
-        <Footer />
-      )}
+      {location.pathname === '/404' ? null : <Footer />}
     </ThemeProvider>
   );
 }
