@@ -191,7 +191,7 @@ export const StyledSection = styled(motion.section)`
 
         @media ${devices.tabletL} {
           top: 380px;
-          left: 47%;
+          left: 49%;
         }
       }
 

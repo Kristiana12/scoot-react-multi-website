@@ -1,7 +1,7 @@
 import ScootinImageDesktop from '../assets/images/scootin-desktop.jpg';
 import ScootinImageTablet from '../assets/images/scootin-tablet.jpg';
 import ScootinImageMobile from '../assets/images/scootin-mobile.jpg';
-import { Header } from '../components/ExportComponents';
+import { Header, Container } from '../components/ExportComponents';
 import {
   ProductsFeatures,
   ProductsPreview,
@@ -21,9 +21,11 @@ const Products = () => {
   return (
     <>
       <Header data={headerContent} />
-      <ProductsFeatures />
-      <ProductsPreview />
-      <ProductsBookSection />
+      <Container>
+        <ProductsFeatures />
+        <ProductsPreview />
+        <ProductsBookSection />
+      </Container>
     </>
   );
 };
