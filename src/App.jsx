@@ -21,7 +21,7 @@ function App() {
       </Container>
       <motion.main
         className={
-          location.key === 'default' && location.pathname !== '/'
+          location.key === 'default' && location.pathname !== '/404'
             ? 'error-page'
             : null
         }
@@ -32,7 +32,7 @@ function App() {
       >
         {location.pathname === '/' ? <Home /> : <Outlet />}
       </motion.main>
-      {location.key === 'default' && location.pathname !== '/' ? null : (
+      {location.key === 'default' && location.pathname !== '/404' ? null : (
         <Footer />
       )}
     </ThemeProvider>
