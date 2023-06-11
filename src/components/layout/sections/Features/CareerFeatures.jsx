@@ -40,7 +40,7 @@ const CareerFeatures = () => {
         'We’re always looking for ambitious individuals to help us on our journey. If you’re passionate about our mission to provide clean, accessible transport to improve urban living we want to hear from you!',
       button: 'Say Hello',
       buttonClass: 'btn-primary',
-      urlLocation: '/locations',
+      urlLocation: '/contact',
       className: 'features-card card',
     },
   ];

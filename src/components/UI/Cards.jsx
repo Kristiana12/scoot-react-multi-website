@@ -2,12 +2,14 @@ import Button from './Button';
 import { v4 as uuidv4 } from 'uuid';
 import { StyledTitle, StyledSection } from '../styles/Card.styled';
 import SectionInView from '../layout/sections/SectionInView';
+//Lazy loading images
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Card = ({ data }) => {
   return (
     <div className={data.className}>
       <div className="image">
-        {data.image && <img src={data.image} alt="" />}
+        {data.image && <LazyLoadImage src={data.image} alt="" />}
         {data.icon && <div className="card-icon">{data.icon}</div>}
         {data.icon2 && <div className="card-icon2">{data.icon2}</div>}
       </div>

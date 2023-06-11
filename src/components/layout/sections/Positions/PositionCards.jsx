@@ -12,7 +12,7 @@ const PositionCard = ({ data }) => {
         <h4 className="title-s">{data.position}</h4>
         <p>{data.location}</p>
       </div>
-      <Button className="btn-primary" to="#">
+      <Button className="btn-primary" to="/contact">
         Apply
       </Button>
     </StyledPositionCard>
