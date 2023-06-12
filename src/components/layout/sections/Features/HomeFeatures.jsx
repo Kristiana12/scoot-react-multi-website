@@ -2,6 +2,9 @@
 import Payments from '../../../../assets/images/payments.jpg';
 import NearYou from '../../../../assets/images/near-you.jpg';
 import Telemetry from '../../../../assets/images/telemetry.jpg';
+import PaymentsPlaceholder from '../../../../assets/images/payments-low-quality.jpg';
+import NearYouPlaceholder from '../../../../assets/images/near-you-low-quality.jpg';
+import TelemetryPlaceholder from '../../../../assets/images/telemetry-low-quality.jpg';
 import useTheme from '../../../../hooks/useThemeHook';
 import { Cards } from '../../../ExportComponents';
 
@@ -10,6 +13,8 @@ const HomeFeatures = () => {
   const features = [
     {
       image: Telemetry,
+      imagePlaceholder: TelemetryPlaceholder,
+      imageAlt: 'Woman smiling while typing on her phone',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g
@@ -47,6 +52,8 @@ const HomeFeatures = () => {
     },
     {
       image: NearYou,
+      imagePlaceholder: NearYouPlaceholder,
+      imageAlt: 'City buildings',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g
@@ -84,6 +91,8 @@ const HomeFeatures = () => {
     },
     {
       image: Payments,
+      imagePlaceholder: PaymentsPlaceholder,
+      imageAlt: 'Man taking out money from his purse',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g

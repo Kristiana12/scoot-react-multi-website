@@ -3,12 +3,17 @@ import useTheme from '../../../hooks/useThemeHook';
 import OurCommunity from '../../../assets/images/our-community.jpg';
 import OurIntegrity from '../../../assets/images/our-integrity.jpg';
 import OurTech from '../../../assets/images/our-tech.jpg';
+import OurCommunityPlaceholder from '../../../assets/images/our-community-low-quality.jpg';
+import OurIntegrityPlaceholder from '../../../assets/images/our-integrity-low-quality.jpg';
+import OurTechPlaceholder from '../../../assets/images/our-tech-low-quality.jpg';
 
 const Values = ({ sectionTitle }) => {
   const { selectedTheme } = useTheme();
   const content = [
     {
       image: OurTech,
+      imagePlaceholder: OurTechPlaceholder,
+      imageAlt: 'Woman typing on her phone',
       icon: (
         <svg
           width="96"
@@ -45,6 +50,8 @@ const Values = ({ sectionTitle }) => {
     ,
     {
       image: OurIntegrity,
+      imagePlaceholder: OurIntegrityPlaceholder,
+      imageAlt: 'Man driving a scooter on the street',
       icon: (
         <svg
           width="96"
@@ -80,6 +87,8 @@ const Values = ({ sectionTitle }) => {
     },
     {
       image: OurCommunity,
+      imagePlaceholder: OurCommunityPlaceholder,
+      imageAlt: 'Many people walking on the street',
       icon: (
         <svg
           width="96"

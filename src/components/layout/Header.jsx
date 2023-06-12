@@ -60,7 +60,6 @@ const HeaderContent = ({ data }) => {
 };
 
 const Header = ({ data }) => {
-  console.log(data);
   const location = useLocation();
   return (
     <StyledHeader className={location.pathname === '/' ? 'home' : 'page'}>

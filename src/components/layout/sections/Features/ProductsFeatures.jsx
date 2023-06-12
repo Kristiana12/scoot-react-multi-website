@@ -1,6 +1,8 @@
 import { Cards } from '../../../ExportComponents';
 import DiscoverImage from '../../../../assets/images/discover.jpg';
 import SecurityImage from '../../../../assets/images/security.jpg';
+import DiscoverImagePlaceholder from '../../../../assets/images/discover-low-quality.jpg';
+import SecurityImagePlaceholder from '../../../../assets/images/security-low-quality.jpg';
 import useTheme from '../../../../hooks/useThemeHook';
 
 const ProductsFeatures = () => {
@@ -8,6 +10,8 @@ const ProductsFeatures = () => {
   const features = [
     {
       image: DiscoverImage,
+      imagePlaceholder: DiscoverImagePlaceholder,
+      imageAlt: 'A woman looking on a map while seated on a scooter',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g
@@ -45,6 +49,8 @@ const ProductsFeatures = () => {
     },
     {
       image: SecurityImage,
+      imagePlaceholder: SecurityImagePlaceholder,
+      imageAlt: 'Man is repairing a scooter',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g

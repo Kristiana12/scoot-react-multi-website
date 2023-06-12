@@ -1,5 +1,6 @@
 import { Cards } from '../../../ExportComponents';
 import JoinUs from '../../../../assets/images/join-us.jpg';
+import JoinUsPlaceholder from '../../../../assets/images/join-us-low-quality.jpg';
 import useTheme from '../../../../hooks/useThemeHook';
 
 const CareerFeatures = () => {
@@ -8,6 +9,8 @@ const CareerFeatures = () => {
   const features = [
     {
       image: JoinUs,
+      imagePlaceholder: JoinUsPlaceholder,
+      imageAlt: 'Man standing in front of colleagues with a tablet in his hand',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g

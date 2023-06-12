@@ -1,6 +1,8 @@
 import useTheme from '../../../../hooks/useThemeHook';
 import BetterLiving from '../../../../assets/images/better-living.jpg';
 import DigitalEra from '../../../../assets/images/digital-era.jpg';
+import BetterLivingPlaceholder from '../../../../assets/images/better-living-low-quality.jpg';
+import DigitalEraPlaceholder from '../../../../assets/images/digital-era-low-quality.jpg';
 import { Cards } from '../../../ExportComponents';
 
 const AboutFeatures = () => {
@@ -8,6 +10,8 @@ const AboutFeatures = () => {
   const features = [
     {
       image: DigitalEra,
+      imagePlaceholder: DigitalEraPlaceholder,
+      imageAlt: 'Bus driving in the city',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g
@@ -42,6 +46,8 @@ const AboutFeatures = () => {
     },
     {
       image: BetterLiving,
+      imagePlaceholder: BetterLivingPlaceholder,
+      imageAlt: 'Woman staring at her phone screen',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="741" height="151">
           <g

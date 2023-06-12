@@ -4,12 +4,20 @@ import { StyledTitle, StyledSection } from '../styles/Card.styled';
 import SectionInView from '../layout/sections/SectionInView';
 //Lazy loading images
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/black-and-white.css';
 
 const Card = ({ data }) => {
   return (
     <div className={data.className}>
       <div className="image">
-        {data.image && <LazyLoadImage src={data.image} alt="" />}
+        {data.image && (
+          <LazyLoadImage
+            placeholderSrc={data.imagePlaceholder}
+            effect="black-and-white"
+            src={data.image}
+            alt={data.imageAlt}
+          />
+        )}
         {data.icon && <div className="card-icon">{data.icon}</div>}
         {data.icon2 && <div className="card-icon2">{data.icon2}</div>}
       </div>

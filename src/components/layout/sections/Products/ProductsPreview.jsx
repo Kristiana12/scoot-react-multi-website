@@ -1,6 +1,9 @@
 import ScooterOne from '../../../../assets/images/scooter-01.jpg';
 import ScooterTwo from '../../../../assets/images/scooter-02.jpg';
 import ScooterThree from '../../../../assets/images/scooter-03.jpg';
+import ScooterOnePlaceholder from '../../../../assets/images/scooter-01-low-quality.jpg';
+import ScooterTwoPlaceholder from '../../../../assets/images/scooter-02-low-quality.jpg';
+import ScooterThreePlaceholder from '../../../../assets/images/scooter-03-low-quality.jpg';
 import { Cards } from '../../../ExportComponents';
 import useTheme from '../../../..//hooks/useThemeHook';
 
@@ -9,6 +12,8 @@ const ProductsPreview = () => {
   const scootersContent = [
     {
       image: ScooterOne,
+      imagePlaceholder: ScooterOnePlaceholder,
+      imageAlt: 'orange scooter',
       icon: (
         <svg
           width="96"
@@ -45,6 +50,8 @@ const ProductsPreview = () => {
     ,
     {
       image: ScooterTwo,
+      imagePlaceholder: ScooterTwoPlaceholder,
+      imageAlt: 'green Scooter',
       icon: (
         <svg
           width="96"
@@ -80,6 +87,8 @@ const ProductsPreview = () => {
     },
     {
       image: ScooterThree,
+      imagePlaceholder: ScooterThreePlaceholder,
+      imageAlt: 'white Scooter',
       icon: (
         <svg
           width="96"

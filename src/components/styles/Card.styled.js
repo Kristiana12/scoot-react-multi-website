@@ -152,6 +152,13 @@ export const StyledSection = styled(motion.section)`
         overflow: hidden;
         margin-bottom: 1.5rem;
 
+        //for the react-lazy-loading-image-component
+        & > span {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+
         @media ${devices.mobile} {
           width: 310px;
           height: 310px;
