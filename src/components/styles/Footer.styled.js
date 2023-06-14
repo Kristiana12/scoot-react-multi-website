@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import devices from '../styles/devices';
 
-export const StyledFooter = styled.footer`
+export const StyledFooterBottom = styled.section`
   padding: 4rem 0 5.25rem;
   background-color: ${({ theme }) => theme.colors.footer};
   text-align: center;

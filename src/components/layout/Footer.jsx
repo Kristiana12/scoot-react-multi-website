@@ -5,7 +5,7 @@ import useNavigation from '../../hooks/useNavigation';
 import useTheme from '../../hooks/useThemeHook';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  StyledFooter,
+  StyledFooterBottom,
   StyledFooterNavigation,
   StyledSocialList,
 } from '../styles/Footer.styled';
@@ -62,9 +62,9 @@ const Footer = () => {
   ));
 
   return (
-    <>
+    <footer>
       <AppStore />
-      <StyledFooter>
+      <StyledFooterBottom>
         <Container className="small">
           <StyledFooterNavigation>
             <Link className="logo" to="/">
@@ -74,8 +74,8 @@ const Footer = () => {
             <StyledSocialList>{socialSvgNav}</StyledSocialList>
           </StyledFooterNavigation>
         </Container>
-      </StyledFooter>
-    </>
+      </StyledFooterBottom>
+    </footer>
   );
 };
 

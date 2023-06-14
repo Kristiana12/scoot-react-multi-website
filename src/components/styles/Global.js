@@ -65,7 +65,7 @@ section {
   }
 }
 
-header, footer {
+header {
   padding: 0 1.5rem;
 }
 
