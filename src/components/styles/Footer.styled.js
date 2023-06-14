@@ -5,6 +5,7 @@ export const StyledFooterBottom = styled.section`
   padding: 4rem 0 5.25rem;
   background-color: ${({ theme }) => theme.colors.footer};
   text-align: center;
+  max-width: 100%;
 
   @media ${devices.tablet} {
     padding: 3.25rem 1.5rem;
