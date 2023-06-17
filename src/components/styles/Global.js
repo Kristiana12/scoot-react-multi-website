@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+html, #root {
+  overflow-x: hidden;
+}
+
 body {
   background-color: ${({ theme }) => theme.colors.body};
   color: ${({ theme }) => theme.colors.text};
@@ -80,6 +84,8 @@ main {
   }
 
 }
+
+
 
 ::selection {
   color: ${({ theme }) => theme.colors.textContrast};
